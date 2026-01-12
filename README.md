@@ -5,6 +5,7 @@
 <details>
 <summary>English README (default)</summary>
 
+- [Українська](./docs/translations/README.uk.md)
 - [Español](./docs/translations/README.es.md)
 - [Français](./docs/translations/README.fr.md)
 - [Deutsch](./docs/translations/README.de.md)
