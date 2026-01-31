@@ -1,0 +1,276 @@
+name: Re-enable Community Backlog on Close
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: community-issue-closed
+  cancel-in-progress: true
+
+jobs:
+  reenable-backlog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.repository == 'lingdojo/kana-dojo'
+    env:
+      AUTOMATION_PR_TOKEN: ${{ secrets.AUTOMATION_PR_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Re-enable backlog item from closed issue
+        id: reenable
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const templates = require('./.github/templates/messages.cjs');
+
+            const issue = context.payload.issue;
+            if (!issue) {
+              console.log('No issue in payload; skipping.');
+              return;
+            }
+
+            if (issue.pull_request) {
+              console.log('Issue is a PR; skipping.');
+              return;
+            }
+
+            const labels = (issue.labels || []).map(function(label) {
+              return label.name;
+            });
+
+            if (!labels.includes(templates.labels.community)) {
+              console.log('Issue is not a community issue; skipping.');
+              return;
+            }
+
+            if (issue.state_reason !== 'not_planned') {
+              console.log(`Issue closed with reason "${issue.state_reason}"; skipping.`);
+              return;
+            }
+
+            const themeBacklogPath = 'data/community/theme-backlog.json';
+            const factsBacklogPath = 'data/community/facts-backlog.json';
+            const proverbsBacklogPath = 'data/community/proverbs-backlog.json';
+            const triviaBacklogPath = 'data/community/trivia-backlog.json';
+            const grammarBacklogPath = 'data/community/grammar-backlog.json';
+            const animeQuotesBacklogPath = 'data/community/anime-quotes-backlog.json';
+
+            const themes = JSON.parse(fs.readFileSync(themeBacklogPath, 'utf8'));
+            const facts = JSON.parse(fs.readFileSync(factsBacklogPath, 'utf8'));
+            const proverbs = JSON.parse(fs.readFileSync(proverbsBacklogPath, 'utf8'));
+            const trivia = JSON.parse(fs.readFileSync(triviaBacklogPath, 'utf8'));
+            const grammar = JSON.parse(fs.readFileSync(grammarBacklogPath, 'utf8'));
+            const animeQuotes = JSON.parse(fs.readFileSync(animeQuotesBacklogPath, 'utf8'));
+
+            let needsCommit = false;
+            const title = issue.title || '';
+
+            function reenableBacklogItem() {
+              if (title.includes('Add New Color Theme:')) {
+                const themeMatch = title.match(/Add New Color Theme:\s*(.+?)\s*\(good[- ]first issue\)/i);
+                if (themeMatch) {
+                  const themeName = themeMatch[1].trim();
+                  const themeIndex = themes.findIndex(function(t) { return t.name === themeName; });
+                  if (themeIndex !== -1 && !themes[themeIndex].completed) {
+                    themes[themeIndex].issued = false;
+                    needsCommit = true;
+                    console.log(`Re-enabled theme: ${themeName}`);
+                  } else if (themeIndex !== -1 && themes[themeIndex].completed) {
+                    console.log(`Theme "${themeName}" is already completed, not re-enabling`);
+                  }
+                }
+                return;
+              }
+
+              if (title.includes('Add Japan Fact #')) {
+                const factIdMatch = title.match(/#(\d+)/);
+                if (factIdMatch) {
+                  const factId = parseInt(factIdMatch[1]);
+                  const factIndex = facts.findIndex(function(f) { return f.id === factId; });
+                  if (factIndex !== -1 && !facts[factIndex].completed) {
+                    facts[factIndex].issued = false;
+                    needsCommit = true;
+                    console.log(`Re-enabled fact #${factId}`);
+                  } else if (factIndex !== -1 && facts[factIndex].completed) {
+                    console.log(`Fact #${factId} is already completed, not re-enabling`);
+                  }
+                }
+                return;
+              }
+
+              if (title.includes('Add Japanese Proverb #')) {
+                const proverbIdMatch = title.match(/#(\d+)/);
+                if (proverbIdMatch) {
+                  const proverbId = parseInt(proverbIdMatch[1]);
+                  const proverbIndex = proverbs.findIndex(function(p) { return p.id === proverbId; });
+                  if (proverbIndex !== -1 && !proverbs[proverbIndex].completed) {
+                    proverbs[proverbIndex].issued = false;
+                    needsCommit = true;
+                    console.log(`Re-enabled proverb #${proverbId}`);
+                  } else if (proverbIndex !== -1 && proverbs[proverbIndex].completed) {
+                    console.log(`Proverb #${proverbId} is already completed, not re-enabling`);
+                  }
+                }
+                return;
+              }
+
+              if (title.includes('Add New Trivia Question #')) {
+                const triviaIdMatch = title.match(/#(\d+)/);
+                if (triviaIdMatch) {
+                  const triviaId = parseInt(triviaIdMatch[1]);
+                  const triviaIndex = trivia.findIndex(function(q) { return q.id === triviaId; });
+                  if (triviaIndex !== -1 && !trivia[triviaIndex].completed) {
+                    trivia[triviaIndex].issued = false;
+                    needsCommit = true;
+                    console.log(`Re-enabled trivia #${triviaId}`);
+                  } else if (triviaIndex !== -1 && trivia[triviaIndex].completed) {
+                    console.log(`Trivia #${triviaId} is already completed, not re-enabling`);
+                  }
+                }
+                return;
+              }
+
+              if (title.includes('Add New Grammar Point #')) {
+                const grammarIdMatch = title.match(/#(\d+)/);
+                if (grammarIdMatch) {
+                  const grammarId = parseInt(grammarIdMatch[1]);
+                  const grammarIndex = grammar.findIndex(function(g) { return g.id === grammarId; });
+                  if (grammarIndex !== -1 && !grammar[grammarIndex].completed) {
+                    grammar[grammarIndex].issued = false;
+                    needsCommit = true;
+                    console.log(`Re-enabled grammar #${grammarId}`);
+                  } else if (grammarIndex !== -1 && grammar[grammarIndex].completed) {
+                    console.log(`Grammar #${grammarId} is already completed, not re-enabling`);
+                  }
+                }
+                return;
+              }
+
+              if (title.includes('Add Famous Anime Quote #')) {
+                const quoteIdMatch = title.match(/#(\d+)/);
+                if (quoteIdMatch) {
+                  const quoteId = parseInt(quoteIdMatch[1]);
+                  const quoteIndex = animeQuotes.findIndex(function(q) { return q.id === quoteId; });
+                  if (quoteIndex !== -1 && !animeQuotes[quoteIndex].completed) {
+                    animeQuotes[quoteIndex].issued = false;
+                    needsCommit = true;
+                    console.log(`Re-enabled anime quote #${quoteId}`);
+                  } else if (quoteIndex !== -1 && animeQuotes[quoteIndex].completed) {
+                    console.log(`Anime quote #${quoteId} is already completed, not re-enabling`);
+                  }
+                }
+              }
+            }
+
+            reenableBacklogItem();
+
+            if (needsCommit) {
+              fs.writeFileSync(themeBacklogPath, JSON.stringify(themes, null, 2));
+              fs.writeFileSync(factsBacklogPath, JSON.stringify(facts, null, 2));
+              fs.writeFileSync(proverbsBacklogPath, JSON.stringify(proverbs, null, 2));
+              fs.writeFileSync(triviaBacklogPath, JSON.stringify(trivia, null, 2));
+              fs.writeFileSync(grammarBacklogPath, JSON.stringify(grammar, null, 2));
+              fs.writeFileSync(animeQuotesBacklogPath, JSON.stringify(animeQuotes, null, 2));
+              core.setOutput('needs_commit', 'true');
+              return;
+            }
+
+            core.setOutput('needs_commit', 'false');
+
+      - name: Create PR for backlog updates
+        id: commit-backlog
+        if: steps.reenable.outputs.needs_commit == 'true' && env.AUTOMATION_PR_TOKEN != ''
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          add-paths: |
+            data/community/
+          commit-message: 'chore(automation): re-enable closed issue backlog'
+          branch: automation/community-data/closed-${{ github.run_id }}
+          title: 'chore(automation): update community backlog'
+          body: Automated update to community backlog state.
+          base: main
+          delete-branch: true
+
+      - name: Auto-approve and merge automation PR
+        if: steps.reenable.outputs.needs_commit == 'true' && env.AUTOMATION_PR_TOKEN != ''
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          script: |
+            const prNumber = Number(process.env.PR_NUMBER);
+
+            async function sleep(ms) {
+              return new Promise(function(resolve) { setTimeout(resolve, ms); });
+            }
+
+            if (!prNumber) {
+              console.log('No PR was created; nothing to merge');
+              return;
+            }
+
+            const MAX_RETRIES = 10;
+            for (let i = 1; i <= MAX_RETRIES; i += 1) {
+              try {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  merge_method: 'squash'
+                });
+                console.log(`Merged automation PR #${prNumber}`);
+
+                try {
+                  const { data: pr } = await github.rest.pulls.get({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number: prNumber
+                  });
+                  const ref = pr && pr.head && pr.head.ref;
+                  if (ref) {
+                    await github.rest.git.deleteRef({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      ref: `heads/${ref}`
+                    });
+                    console.log(`Deleted automation branch: ${ref}`);
+                  }
+                } catch (deleteErr) {
+                  console.log(`Could not delete automation branch: ${deleteErr.message}`);
+                }
+                return;
+              } catch (e) {
+                console.log(`Merge attempt ${i} failed: ${e.message}`);
+                if (e.status === 409) {
+                  try {
+                    await github.rest.pulls.updateBranch({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      pull_number: prNumber
+                    });
+                    console.log(`Requested branch update for PR #${prNumber}`);
+                  } catch (updateErr) {
+                    console.log(`Could not update branch: ${updateErr.message}`);
+                  }
+                }
+                if (i < MAX_RETRIES) {
+                  await sleep(2000);
+                }
+              }
+            }
+
+            throw new Error(`Failed to merge automation PR #${prNumber}`);
+        env:
+          PR_NUMBER: ${{ steps.commit-backlog.outputs.pull-request-number }}
