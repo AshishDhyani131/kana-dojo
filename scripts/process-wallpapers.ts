@@ -8,10 +8,16 @@
  * Premium themes are dynamically generated from whatever images exist in the
  * source folder — no hardcoded wallpaper list needed.
  *
- * Usage: npm run images:process
+ * Incremental processing: Only new or modified source images are processed.
+ * The script uses timestamp-based dependency checking (like `make`) to skip
+ * images whose outputs already exist and are up-to-date.
+ *
+ * Usage:
+ *   npm run images:process           # Incremental (skip up-to-date images)
+ *   npm run images:process -- --force # Force reprocess all images
  */
 import sharp from 'sharp';
-import { readdir, mkdir, stat, writeFile } from 'node:fs/promises';
+import { readdir, mkdir, stat, writeFile, unlink } from 'node:fs/promises';
 import { join, parse, extname } from 'node:path';
 
 // Configuration
@@ -33,12 +39,15 @@ const WIDTHS = [1920, 2560, 3840];
 const AVIF_OPTIONS: sharp.AvifOptions = { quality: 65, effort: 6 };
 const WEBP_OPTIONS: sharp.WebpOptions = { quality: 78 };
 
+const forceReprocess = process.argv.includes('--force');
+
 interface ProcessResult {
   source: string;
   baseName: string;
   displayName: string;
   outputs: { file: string; size: number; format: string; width: number }[];
   originalSize: number;
+  skipped?: boolean;
   error?: string;
 }
 
@@ -68,6 +77,60 @@ async function getSourceImages(): Promise<string[]> {
       '   Create the directory and add source images. See data/wallpapers-source/README.md',
     );
     process.exit(1);
+  }
+}
+
+/**
+ * Get expected output filenames for a given source image base name.
+ * Each source image produces AVIF + WebP at each configured width.
+ */
+function getExpectedOutputs(baseName: string): string[] {
+  const outputs: string[] = [];
+  for (const width of WIDTHS) {
+    outputs.push(`${baseName}-${width}w.avif`);
+    outputs.push(`${baseName}-${width}w.webp`);
+  }
+  return outputs;
+}
+
+/**
+ * Check if a source image needs (re)processing using timestamp-based
+ * dependency checking — the same strategy used by `make`.
+ *
+ * Returns true if:
+ *   - Any expected output file is missing
+ *   - The source file is newer than the oldest output file (source was updated)
+ */
+async function needsProcessing(filename: string): Promise<boolean> {
+  if (forceReprocess) return true;
+
+  const sourcePath = join(SOURCE_DIR, filename);
+  const baseName = parse(filename).name;
+  const expectedOutputs = getExpectedOutputs(baseName);
+
+  try {
+    const sourceStat = await stat(sourcePath);
+    const sourceMtime = sourceStat.mtimeMs;
+
+    for (const outputFile of expectedOutputs) {
+      const outputPath = join(OUTPUT_DIR, outputFile);
+      try {
+        const outputStat = await stat(outputPath);
+        // Source is newer than this output → needs reprocessing
+        if (sourceMtime > outputStat.mtimeMs) {
+          return true;
+        }
+      } catch {
+        // Output file doesn't exist → needs processing
+        return true;
+      }
+    }
+
+    // All outputs exist and are newer than source
+    return false;
+  } catch {
+    // Can't stat source → let processImage handle the error
+    return true;
   }
 }
 
@@ -199,9 +262,42 @@ ${entries}
 `;
 }
 
+/**
+ * Remove output files from public/wallpapers/ that no longer have a
+ * corresponding source image (e.g., the source was deleted).
+ */
+async function cleanOrphanedOutputs(
+  sourceBaseNames: Set<string>,
+): Promise<string[]> {
+  const removed: string[] = [];
+
+  try {
+    const outputFiles = await readdir(OUTPUT_DIR);
+    for (const file of outputFiles) {
+      // Output files follow the pattern: {baseName}-{width}w.{ext}
+      const match = file.match(/^(.+)-\d+w\.(avif|webp)$/);
+      if (match) {
+        const baseName = match[1];
+        if (!sourceBaseNames.has(baseName)) {
+          await unlink(join(OUTPUT_DIR, file));
+          removed.push(file);
+        }
+      }
+    }
+  } catch {
+    // Output dir might not exist yet — nothing to clean
+  }
+
+  return removed;
+}
+
 async function main() {
   console.log('🖼️  Wallpaper Image Processor');
   console.log('━'.repeat(50));
+
+  if (forceReprocess) {
+    console.log('⚡ Force mode: reprocessing all images\n');
+  }
 
   // Ensure output directory exists
   await mkdir(OUTPUT_DIR, { recursive: true });
@@ -218,7 +314,38 @@ async function main() {
     return;
   }
 
-  console.log(`\n📁 Found ${sourceFiles.length} source image(s)\n`);
+  // Clean up orphaned outputs from removed source images
+  const sourceBaseNames = new Set(sourceFiles.map(f => parse(f).name));
+  const orphansRemoved = await cleanOrphanedOutputs(sourceBaseNames);
+  if (orphansRemoved.length > 0) {
+    console.log(`\n🧹 Cleaned ${orphansRemoved.length} orphaned output(s):`);
+    for (const file of orphansRemoved) {
+      console.log(`   × ${file}`);
+    }
+  }
+
+  console.log(`\n📁 Found ${sourceFiles.length} source image(s)`);
+
+  // Determine which images need processing
+  const toProcess: string[] = [];
+  const toSkip: string[] = [];
+
+  for (const file of sourceFiles) {
+    if (await needsProcessing(file)) {
+      toProcess.push(file);
+    } else {
+      toSkip.push(file);
+    }
+  }
+
+  if (toSkip.length > 0) {
+    console.log(`   ⏭️  ${toSkip.length} already up-to-date (skipped)`);
+  }
+  if (toProcess.length > 0) {
+    console.log(`   🔄 ${toProcess.length} to process\n`);
+  } else {
+    console.log(`\n✅ All images are up-to-date — nothing to process.`);
+  }
 
   const results: ProcessResult[] = [];
   let totalOutputs = 0;
@@ -226,7 +353,8 @@ async function main() {
   let totalOriginalSize = 0;
   let errors = 0;
 
-  for (const file of sourceFiles) {
+  // Process only images that need it
+  for (const file of toProcess) {
     const result = await processImage(file);
     results.push(result);
 
@@ -242,7 +370,23 @@ async function main() {
     }
   }
 
-  // Generate manifest
+  // Add skipped images as results (needed for manifest generation)
+  for (const file of toSkip) {
+    const baseName = parse(file).name;
+    results.push({
+      source: file,
+      baseName,
+      displayName: toDisplayName(baseName),
+      outputs: [],
+      originalSize: 0,
+      skipped: true,
+    });
+  }
+
+  // Sort results by baseName for deterministic manifest output
+  results.sort((a, b) => a.baseName.localeCompare(b.baseName));
+
+  // Generate manifest (always — includes all wallpapers)
   const manifest = generateManifest(results);
   await writeFile(MANIFEST_PATH, manifest, 'utf-8');
 
@@ -257,6 +401,11 @@ async function main() {
       continue;
     }
 
+    if (result.skipped) {
+      console.log(`  ⏭️  ${result.source} (up-to-date)`);
+      continue;
+    }
+
     console.log(`  ✅ ${result.source} (${formatBytes(result.originalSize)})`);
 
     for (const output of result.outputs) {
@@ -268,17 +417,22 @@ async function main() {
   }
 
   console.log('\n' + '━'.repeat(50));
-  console.log(`  Files processed: ${results.length}`);
-  console.log(`  Outputs generated: ${totalOutputs}`);
-  console.log(`  Total source size: ${formatBytes(totalOriginalSize)}`);
-  console.log(`  Total output size: ${formatBytes(totalOutputSize)}`);
+  console.log(`  Source images: ${sourceFiles.length}`);
+  console.log(`  Processed: ${toProcess.length - errors}`);
+  console.log(`  Skipped (up-to-date): ${toSkip.length}`);
 
-  if (totalOriginalSize > 0) {
-    const avgRatio = (
-      (totalOutputSize / (totalOriginalSize * (totalOutputs / 2))) *
-      100
-    ).toFixed(1);
-    console.log(`  Avg compression ratio: ~${avgRatio}%`);
+  if (toProcess.length > 0) {
+    console.log(`  Outputs generated: ${totalOutputs}`);
+    console.log(`  Total source size: ${formatBytes(totalOriginalSize)}`);
+    console.log(`  Total output size: ${formatBytes(totalOutputSize)}`);
+
+    if (totalOriginalSize > 0) {
+      const avgRatio = (
+        (totalOutputSize / (totalOriginalSize * (totalOutputs / 2))) *
+        100
+      ).toFixed(1);
+      console.log(`  Avg compression ratio: ~${avgRatio}%`);
+    }
   }
 
   if (errors > 0) {
