@@ -7,7 +7,7 @@
     "mainColor": "oklch(82.0% 0.210 340.0 / 1)",
     "secondaryColor": "oklch(72.0% 0.165 285.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": "bamboo-mist",
@@ -17,7 +17,7 @@
     "mainColor": "oklch(78.0% 0.145 145.0 / 1)",
     "secondaryColor": "oklch(68.0% 0.085 130.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": "koi-pond",
@@ -27,7 +27,7 @@
     "mainColor": "oklch(80.0% 0.175 55.0 / 1)",
     "secondaryColor": "oklch(70.0% 0.130 220.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": "origami-crane",
@@ -37,7 +37,7 @@
     "mainColor": "oklch(55.0% 0.220 25.0 / 1)",
     "secondaryColor": "oklch(45.0% 0.150 20.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": "thunder-temple",
@@ -47,7 +47,7 @@
     "mainColor": "oklch(85.0% 0.185 260.0 / 1)",
     "secondaryColor": "oklch(75.0% 0.145 290.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": "matcha-cream",
@@ -57,7 +57,7 @@
     "mainColor": "oklch(55.0% 0.180 140.0 / 1)",
     "secondaryColor": "oklch(70.0% 0.120 80.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": "torii-sunset",
@@ -66,7 +66,7 @@
     "backgroundColor": "oklch(22.0% 0.058 35.0 / 1)",
     "mainColor": "oklch(75.0% 0.195 40.0 / 1)",
     "secondaryColor": "oklch(85.0% 0.155 70.0 / 1)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
