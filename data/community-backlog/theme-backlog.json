@@ -637,7 +637,9 @@
     "mainColor": "oklch(85.0% 0.085 215.0 / 1)",
     "secondaryColor": "oklch(70.0% 0.065 195.0 / 1)",
     "issued": true,
-    "completed": false
+    "completed": true,
+    "completedBy": "ianalloway",
+    "completedPR": 4911
   },
   {
     "id": "tanuki-mischief",
