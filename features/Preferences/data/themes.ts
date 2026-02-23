@@ -199,7 +199,9 @@ function buildThemeGroup(baseGroup: {
   return {
     name: baseGroup.name,
     icon: baseGroup.icon,
-    themes: baseGroup.themes.map(theme => buildTheme(theme, baseGroup.isLight)),
+    themes: baseGroup.themes.map(theme =>
+      buildTheme(theme, theme.isLight ?? baseGroup.isLight),
+    ),
   };
 }
 

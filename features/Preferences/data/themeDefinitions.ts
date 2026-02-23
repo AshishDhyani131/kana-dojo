@@ -21,6 +21,7 @@ import { GENERATED_WALLPAPERS } from './wallpapers.generated';
 export interface BaseTheme {
   id: string;
   displayName?: string;
+  isLight?: boolean;
   backgroundColor: string;
   mainColor: string;
   secondaryColor: string;
@@ -67,6 +68,7 @@ const baseThemeSets: BaseThemeGroup[] = [
     themes: [
       {
         id: 'light',
+        isLight: true,
         backgroundColor: 'oklch(100.00% 0.0000 89.88 / 1)',
         mainColor: 'oklch(0.00% 0.0000 0.00 / 1)',
         secondaryColor: 'oklch(46.49% 0.0000 89.88 / 1)',
