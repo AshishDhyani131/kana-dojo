@@ -565,6 +565,7 @@ export default function ActiveGame<T>({
                     ref={inputRef}
                     type='text'
                     value={userAnswer}
+                    autoFocus
                     onChange={e => setUserAnswer?.(e.target.value)}
                     disabled={isChecking}
                     autoComplete='off'

@@ -361,6 +361,7 @@ const KanjiInputGame = ({
               'transition-colors duration-200 ease-out',
               showContinue && 'cursor-not-allowed opacity-60',
             )}
+            autoFocus
             onChange={e => setInputValue(e.target.value)}
             onKeyDown={e => {
               if (e.key === 'Enter') {
