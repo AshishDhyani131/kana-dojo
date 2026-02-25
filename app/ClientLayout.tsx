@@ -22,6 +22,7 @@ import MobileBottomBar from '@/shared/components/layout/BottomBar';
 import { useVisitTracker } from '@/features/Progress/hooks/useVisitTracker';
 import { getGlobalAdaptiveSelector } from '@/shared/lib/adaptiveSelection';
 import GlobalAudioController from '@/shared/components/layout/GlobalAudioController';
+import { useClick } from '@/shared/hooks/useAudio';
 import ServiceWorkerRegistration from '@/shared/components/ServiceWorkerRegistration';
 import CursorTrailRenderer from '@/features/Preferences/components/CursorTrailRenderer';
 import ClickEffectRenderer from '@/features/Preferences/components/ClickEffectRenderer';
@@ -133,6 +134,32 @@ export default function ClientLayout({
 
   // Track user visits for streak feature
   useVisitTracker();
+
+  // Global typing sound: play click when user types in any input element.
+  // playClick already respects the global silentMode setting via useAudioPreferences,
+  // so the effect re-registers automatically whenever that preference changes.
+  const { playClick } = useClick();
+  useEffect(() => {
+    const IGNORED_KEYS = new Set([
+      'Shift', 'Control', 'Alt', 'Meta', 'Tab', 'Escape', 'Enter',
+      'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+      'Backspace', 'Delete', 'Home', 'End', 'PageUp', 'PageDown', 'CapsLock',
+      'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
+    ]);
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.repeat || IGNORED_KEYS.has(e.key)) return;
+      const el = document.activeElement;
+      if (!el) return;
+      const tag = el.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (el as HTMLElement).isContentEditable) {
+        playClick();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [playClick]);
 
   // Note: Web Audio API context resumption is handled in useAudio.ts
 

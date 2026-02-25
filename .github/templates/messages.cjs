@@ -8,22 +8,22 @@ module.exports = {
   // SHARED LABELS (used across multiple workflows)
   // =============================================================================
   labels: {
-    // Labels applied to newly created community issues
-    newIssue: [
+    // Core labels always applied to every new community issue
+    coreIssue: [
       'good first issue',
-      'community',
-      'hacktoberfest',
       'help wanted',
-      'easy',
+      'hacktoberfest',
+      'community',
       'up-for-grabs',
+    ],
+    // Pool — 2-3 randomly selected per issue (adds variety, avoids spam signal)
+    secondaryIssuePool: [
       'first-timers-only',
-      'beginner-friendly',
-      'enhancement',
+      'easy',
       'beginner',
+      'beginner-friendly',
       'low hanging fruit',
       'starter task',
-      'documentation',
-      'frontend',
       'javascript',
     ],
     // Label for filtering community issues
@@ -218,7 +218,12 @@ module.exports = {
         "### 🚀 Quick Info\n\n| | |\n|---|---|\n| **Difficulty** | Beginner / Easy |\n| **Time** | < 1 minute |\n| **Language** | TypeScript, JSON |\n| **Framework** | Next.js, React |\n| **Good for** | First-time contributors, Hacktoberfest |\n\n> **No coding experience required!** This is a simple JSON/data file edit — perfect for your first open source contribution.\n\n**Questions?** Comment below and we'll help! 🙌\n\n_This is a beginner-friendly, good first issue for first-time open source contributors. No coding experience needed — just edit a JSON file! See our [Beginner Contributing Guide](../blob/main/docs/CONTRIBUTING-BEGINNERS.md) for step-by-step instructions._",
       // Welcome comment posted on freshly created issues for engagement signals
       welcomeComment:
-        '👋 **This issue is up for grabs!** Comment below to claim it and get assigned.\n\nNo coding experience needed — just a simple JSON file edit. Check the instructions above and our [Beginner Contributing Guide](../blob/main/docs/CONTRIBUTING-BEGINNERS.md) to get started!\n\nがんばって! 💪',
+        '👋 **This issue is up for grabs!** Comment below to claim it and get auto-assigned.\n\n' +
+        '⏱️ **Takes < 60 seconds** — no coding, no setup, no local installation needed.\n' +
+        '📱 **Works entirely from your phone or browser.**\n' +
+        '🏆 **Your GitHub username will appear in our Contributors list!**\n\n' +
+        'Check the instructions above and our [Beginner Contributing Guide](../blob/main/docs/CONTRIBUTING-BEGINNERS.md) to get started!\n\n' +
+        'がんばって! 💪',
       // Reaction added to the welcome comment for additional engagement
       welcomeCommentReaction: 'heart',
       // Community Contributions milestone number (for issue discoverability)
@@ -261,9 +266,38 @@ module.exports = {
       ];
     },
 
+    /**
+     * Builds the optimized issue body preamble (prepended to all issue types).
+     * §6.2.1 H1 header with unique ID, §6.2.2 no-prerequisites callout,
+     * §6.2.3 difficulty/time badges, §6.2.4 structured metadata.
+     * @param {string} contentTypeLabel - Human-readable type (e.g. "Japan Fact", "Color Theme: Sakura")
+     * @param {number|null} id - Unique issue entry ID, or null for types that use name
+     */
+    buildBodyPreamble(contentTypeLabel, id) {
+      const idStr = id !== undefined && id !== null ? ` #${id}` : '';
+      return [
+        `## 🟢 Good First Issue: Add ${contentTypeLabel}${idStr} — Beginner-Friendly Open Source Contribution`,
+        '',
+        '![Time: <1 minute](https://img.shields.io/badge/Time-<1_minute-brightgreen) ' +
+          '![Difficulty: Beginner](https://img.shields.io/badge/Difficulty-Beginner-blue) ' +
+          '![No Code Required](https://img.shields.io/badge/No_Code-Required-orange)',
+        '',
+        '> 🟢 **No prerequisites needed!** You don\'t need to clone the repo, install anything, or write code.',
+        '> This entire contribution can be done from your browser in under 60 seconds.',
+        '',
+        '**Labels:** good first issue, help wanted, hacktoberfest  ',
+        '**Language:** JSON (no coding required)  ',
+        '**Time:** < 1 minute  ',
+        '**Skill Level:** Absolute beginner  ',
+        '',
+        '---',
+        '',
+      ].join('\n');
+    },
+
     theme: {
       title:
-        '[Good First Issue] {emoji} Add New Color Theme: {name} (good-first-issue, <1 min)',
+        '{emoji} Add Theme: {name} — Good First Issue (<1 min)',
       adjectives: [
         'creative',
         'vibrant',
@@ -302,7 +336,7 @@ module.exports = {
     },
     fact: {
       title:
-        '[Good First Issue] {emoji} Add Interesting, Cultural Fact about Japan {id} (good-first-issue, <1 min)',
+        '{emoji} Add Japan Fact #{id} — Good First Issue (<1 min)',
       adjectives: [
         'interesting',
         'surprising',
@@ -338,7 +372,7 @@ module.exports = {
     },
     proverb: {
       title:
-        '[Good First Issue] {emoji} Add New Japanese Proverb {id} (good-first-issue, <1 min)',
+        '{emoji} Add Japanese Proverb #{id} — Good First Issue (<1 min)',
       adjectives: [
         'wise',
         'timeless',
@@ -373,7 +407,7 @@ module.exports = {
     },
     haiku: {
       title:
-        '[Good First Issue] {emoji} Add Classic Japanese Haiku #{id} (good-first-issue, <1 min)',
+        '{emoji} Add Japanese Haiku #{id} — Good First Issue (<1 min)',
       adjectives: [
         'poetic',
         'evocative',
@@ -408,7 +442,7 @@ module.exports = {
     },
     trivia: {
       title:
-        '[Good First Issue] {emoji} Add New Trivia Question {id} (good-first-issue, <1 min)',
+        '{emoji} Add Trivia Question #{id} — Good First Issue (<1 min)',
       adjectives: [
         'fun',
         'challenging',
@@ -443,7 +477,7 @@ module.exports = {
     },
     grammar: {
       title:
-        '[Good First Issue] {emoji} Add New Grammar Point {id} (good-first-issue, <1 min)',
+        '{emoji} Add Grammar Point #{id} — Good First Issue (<1 min)',
       adjectives: [
         'clear',
         'concise',
@@ -478,7 +512,7 @@ module.exports = {
     },
     idiom: {
       title:
-        '[Good First Issue] {emoji} Add New Japanese Idiom {id} (good-first-issue, <1 min)',
+        '{emoji} Add Japanese Idiom #{id} — Good First Issue (<1 min)',
       adjectives: [
         'expressive',
         'practical',
@@ -513,7 +547,7 @@ module.exports = {
     },
     regionalDialect: {
       title:
-        '[Good First Issue] {emoji} Add Regional Dialect Entry {id} (good-first-issue, <1 min)',
+        '{emoji} Add Dialect Entry #{id} — Good First Issue (<1 min)',
       adjectives: [
         'regional',
         'authentic',
@@ -548,7 +582,7 @@ module.exports = {
     },
     falseFriend: {
       title:
-        '[Good First Issue] {emoji} Add Japanese False Friend {id} (good-first-issue, <1 min)',
+        '{emoji} Add False Friend Pair #{id} — Good First Issue (<1 min)',
       adjectives: [
         'clear',
         'practical',
@@ -583,7 +617,7 @@ module.exports = {
     },
     culturalEtiquette: {
       title:
-        '[Good First Issue] {emoji} Add Japanese Cultural Etiquette Tip {id} (good-first-issue, <1 min)',
+        '{emoji} Add Etiquette Tip #{id} — Good First Issue (<1 min)',
       adjectives: [
         'respectful',
         'practical',
@@ -618,7 +652,7 @@ module.exports = {
     },
     exampleSentence: {
       title:
-        '[Good First Issue] {emoji} Add Japanese Example Sentence {id} (good-first-issue, <1 min)',
+        '{emoji} Add Example Sentence #{id} — Good First Issue (<1 min)',
       adjectives: [
         'natural',
         'useful',
@@ -653,7 +687,7 @@ module.exports = {
     },
     commonMistake: {
       title:
-        '[Good First Issue] {emoji} Add Common Japanese Learner Mistake {id} (good-first-issue, <1 min)',
+        '{emoji} Add Learner Mistake #{id} — Good First Issue (<1 min)',
       adjectives: [
         'practical',
         'clarifying',
@@ -688,7 +722,7 @@ module.exports = {
     },
     videoGameQuote: {
       title:
-        '[Good First Issue] {emoji} Add Famous Japanese Video Game Quote {id} (good-first-issue, <1 min)',
+        '{emoji} Add Video Game Quote #{id} — Good First Issue (<1 min)',
       adjectives: [
         'iconic',
         'memorable',
@@ -723,7 +757,7 @@ module.exports = {
     },
     animeQuote: {
       title:
-        '[Good First Issue] {emoji} Add Famous Anime Quote {id} (good-first-issue, <1 min)',
+        '{emoji} Add Anime Quote #{id} — Good First Issue (<1 min)',
       adjectives: [
         'iconic',
         'memorable',

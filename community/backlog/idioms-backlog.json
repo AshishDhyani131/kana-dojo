@@ -6,7 +6,7 @@
     "english": "so busy you'd borrow a cat's paw",
     "meaning": "extremely busy; community batch entry 1",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "english": "ears grow calluses",
     "meaning": "to hear something over and over; community batch entry 2",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "english": "even monkeys fall from trees",
     "meaning": "experts make mistakes; community batch entry 3",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "english": "what happens twice happens thrice",
     "meaning": "bad luck repeats; community batch entry 4",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "english": "one time one meeting",
     "meaning": "treasure each encounter; community batch entry 5",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "english": "dumplings over flowers",
     "meaning": "practical over aesthetic; community batch entry 6",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "english": "ground hardens after rain",
     "meaning": "hardship strengthens bonds; community batch entry 7",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "english": "the protruding nail gets hammered",
     "meaning": "conformity pressure; community batch entry 8",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "english": "three years on a stone",
     "meaning": "perseverance pays off; community batch entry 9",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "english": "if in a hurry, go around",
     "meaning": "slow is smooth, smooth is fast; community batch entry 10",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "english": "mouth is source of trouble",
     "meaning": "watch your words; community batch entry 11",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "english": "let it flow in water",
     "meaning": "let bygones be bygones; community batch entry 12",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "english": "sutra in a cow's ear",
     "meaning": "words falling on deaf ears; community batch entry 13",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "english": "counting raccoon skins before hunting",
     "meaning": "don't count chickens before hatch; community batch entry 14",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "english": "rice cake from shelf",
     "meaning": "a lucky windfall; community batch entry 15",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "english": "a dog walking hits a stick",
     "meaning": "take action, chance appears; community batch entry 16",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "english": "gold coin to a cat",
     "meaning": "pearls before swine; community batch entry 17",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "english": "spirits match",
     "meaning": "to click with someone; community batch entry 18",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "english": "make it into a tree",
     "meaning": "to worry about something; community batch entry 19",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "english": "spirit not working",
     "meaning": "inconsiderate; community batch entry 20",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 21,
@@ -186,7 +186,7 @@
     "english": "so busy you'd borrow a cat's paw",
     "meaning": "extremely busy; community batch entry 21",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "english": "ears grow calluses",
     "meaning": "to hear something over and over; community batch entry 22",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "english": "even monkeys fall from trees",
     "meaning": "experts make mistakes; community batch entry 23",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 24,
@@ -213,7 +213,7 @@
     "english": "what happens twice happens thrice",
     "meaning": "bad luck repeats; community batch entry 24",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 25,
@@ -222,7 +222,7 @@
     "english": "one time one meeting",
     "meaning": "treasure each encounter; community batch entry 25",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 26,
@@ -231,7 +231,7 @@
     "english": "dumplings over flowers",
     "meaning": "practical over aesthetic; community batch entry 26",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 27,
@@ -240,7 +240,7 @@
     "english": "ground hardens after rain",
     "meaning": "hardship strengthens bonds; community batch entry 27",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 28,
@@ -249,7 +249,7 @@
     "english": "the protruding nail gets hammered",
     "meaning": "conformity pressure; community batch entry 28",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 29,
@@ -258,7 +258,7 @@
     "english": "three years on a stone",
     "meaning": "perseverance pays off; community batch entry 29",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 30,
@@ -267,7 +267,7 @@
     "english": "if in a hurry, go around",
     "meaning": "slow is smooth, smooth is fast; community batch entry 30",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 31,
@@ -276,7 +276,7 @@
     "english": "mouth is source of trouble",
     "meaning": "watch your words; community batch entry 31",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 32,
@@ -285,7 +285,7 @@
     "english": "let it flow in water",
     "meaning": "let bygones be bygones; community batch entry 32",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 33,
@@ -294,7 +294,7 @@
     "english": "sutra in a cow's ear",
     "meaning": "words falling on deaf ears; community batch entry 33",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 34,
@@ -303,7 +303,7 @@
     "english": "counting raccoon skins before hunting",
     "meaning": "don't count chickens before hatch; community batch entry 34",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 35,
@@ -312,7 +312,7 @@
     "english": "rice cake from shelf",
     "meaning": "a lucky windfall; community batch entry 35",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 36,
@@ -321,7 +321,7 @@
     "english": "a dog walking hits a stick",
     "meaning": "take action, chance appears; community batch entry 36",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 37,
@@ -330,7 +330,7 @@
     "english": "gold coin to a cat",
     "meaning": "pearls before swine; community batch entry 37",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 38,
@@ -339,7 +339,7 @@
     "english": "spirits match",
     "meaning": "to click with someone; community batch entry 38",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 39,
@@ -348,7 +348,7 @@
     "english": "make it into a tree",
     "meaning": "to worry about something; community batch entry 39",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 40,
@@ -357,7 +357,7 @@
     "english": "spirit not working",
     "meaning": "inconsiderate; community batch entry 40",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 41,
@@ -366,7 +366,7 @@
     "english": "so busy you'd borrow a cat's paw",
     "meaning": "extremely busy; community batch entry 41",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 42,
@@ -375,7 +375,7 @@
     "english": "ears grow calluses",
     "meaning": "to hear something over and over; community batch entry 42",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 43,
@@ -384,7 +384,7 @@
     "english": "even monkeys fall from trees",
     "meaning": "experts make mistakes; community batch entry 43",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@
     "english": "what happens twice happens thrice",
     "meaning": "bad luck repeats; community batch entry 44",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 45,
@@ -402,7 +402,7 @@
     "english": "one time one meeting",
     "meaning": "treasure each encounter; community batch entry 45",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 46,
@@ -411,7 +411,7 @@
     "english": "dumplings over flowers",
     "meaning": "practical over aesthetic; community batch entry 46",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 47,
@@ -420,7 +420,7 @@
     "english": "ground hardens after rain",
     "meaning": "hardship strengthens bonds; community batch entry 47",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 48,
@@ -429,7 +429,7 @@
     "english": "the protruding nail gets hammered",
     "meaning": "conformity pressure; community batch entry 48",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 49,
@@ -438,7 +438,7 @@
     "english": "three years on a stone",
     "meaning": "perseverance pays off; community batch entry 49",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 50,
@@ -447,7 +447,7 @@
     "english": "if in a hurry, go around",
     "meaning": "slow is smooth, smooth is fast; community batch entry 50",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 51,
@@ -456,7 +456,7 @@
     "english": "mouth is source of trouble",
     "meaning": "watch your words; community batch entry 51",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 52,
@@ -465,7 +465,7 @@
     "english": "let it flow in water",
     "meaning": "let bygones be bygones; community batch entry 52",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 53,
@@ -474,7 +474,7 @@
     "english": "sutra in a cow's ear",
     "meaning": "words falling on deaf ears; community batch entry 53",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 54,
@@ -483,7 +483,7 @@
     "english": "counting raccoon skins before hunting",
     "meaning": "don't count chickens before hatch; community batch entry 54",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 55,
@@ -492,7 +492,7 @@
     "english": "rice cake from shelf",
     "meaning": "a lucky windfall; community batch entry 55",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 56,
@@ -501,7 +501,7 @@
     "english": "a dog walking hits a stick",
     "meaning": "take action, chance appears; community batch entry 56",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 57,
@@ -510,7 +510,7 @@
     "english": "gold coin to a cat",
     "meaning": "pearls before swine; community batch entry 57",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 58,
@@ -519,7 +519,7 @@
     "english": "spirits match",
     "meaning": "to click with someone; community batch entry 58",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 59,
@@ -528,7 +528,7 @@
     "english": "make it into a tree",
     "meaning": "to worry about something; community batch entry 59",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 60,
@@ -537,7 +537,7 @@
     "english": "spirit not working",
     "meaning": "inconsiderate; community batch entry 60",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 61,
@@ -546,7 +546,7 @@
     "english": "so busy you'd borrow a cat's paw",
     "meaning": "extremely busy; community batch entry 61",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 62,
@@ -555,7 +555,7 @@
     "english": "ears grow calluses",
     "meaning": "to hear something over and over; community batch entry 62",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 63,
@@ -564,7 +564,7 @@
     "english": "even monkeys fall from trees",
     "meaning": "experts make mistakes; community batch entry 63",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 64,
@@ -573,7 +573,7 @@
     "english": "what happens twice happens thrice",
     "meaning": "bad luck repeats; community batch entry 64",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 65,
@@ -582,7 +582,7 @@
     "english": "one time one meeting",
     "meaning": "treasure each encounter; community batch entry 65",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 66,
@@ -591,7 +591,7 @@
     "english": "dumplings over flowers",
     "meaning": "practical over aesthetic; community batch entry 66",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 67,
@@ -600,7 +600,7 @@
     "english": "ground hardens after rain",
     "meaning": "hardship strengthens bonds; community batch entry 67",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 68,
@@ -609,7 +609,7 @@
     "english": "the protruding nail gets hammered",
     "meaning": "conformity pressure; community batch entry 68",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 69,
@@ -618,7 +618,7 @@
     "english": "three years on a stone",
     "meaning": "perseverance pays off; community batch entry 69",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 70,
@@ -627,7 +627,7 @@
     "english": "if in a hurry, go around",
     "meaning": "slow is smooth, smooth is fast; community batch entry 70",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 71,
@@ -636,7 +636,7 @@
     "english": "mouth is source of trouble",
     "meaning": "watch your words; community batch entry 71",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 72,
@@ -645,7 +645,7 @@
     "english": "let it flow in water",
     "meaning": "let bygones be bygones; community batch entry 72",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 73,
@@ -654,7 +654,7 @@
     "english": "sutra in a cow's ear",
     "meaning": "words falling on deaf ears; community batch entry 73",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 74,
@@ -663,7 +663,7 @@
     "english": "counting raccoon skins before hunting",
     "meaning": "don't count chickens before hatch; community batch entry 74",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 75,
@@ -672,7 +672,7 @@
     "english": "rice cake from shelf",
     "meaning": "a lucky windfall; community batch entry 75",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 76,
@@ -681,7 +681,7 @@
     "english": "a dog walking hits a stick",
     "meaning": "take action, chance appears; community batch entry 76",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 77,
@@ -690,7 +690,7 @@
     "english": "gold coin to a cat",
     "meaning": "pearls before swine; community batch entry 77",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 78,
@@ -699,7 +699,7 @@
     "english": "spirits match",
     "meaning": "to click with someone; community batch entry 78",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 79,
@@ -708,7 +708,7 @@
     "english": "make it into a tree",
     "meaning": "to worry about something; community batch entry 79",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 80,
@@ -717,7 +717,7 @@
     "english": "spirit not working",
     "meaning": "inconsiderate; community batch entry 80",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 81,
@@ -726,7 +726,7 @@
     "english": "so busy you'd borrow a cat's paw",
     "meaning": "extremely busy; community batch entry 81",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 82,
@@ -735,7 +735,7 @@
     "english": "ears grow calluses",
     "meaning": "to hear something over and over; community batch entry 82",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 83,
@@ -744,7 +744,7 @@
     "english": "even monkeys fall from trees",
     "meaning": "experts make mistakes; community batch entry 83",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 84,
@@ -753,7 +753,7 @@
     "english": "what happens twice happens thrice",
     "meaning": "bad luck repeats; community batch entry 84",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 85,
@@ -762,7 +762,7 @@
     "english": "one time one meeting",
     "meaning": "treasure each encounter; community batch entry 85",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 86,
@@ -771,7 +771,7 @@
     "english": "dumplings over flowers",
     "meaning": "practical over aesthetic; community batch entry 86",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 87,
@@ -780,7 +780,7 @@
     "english": "ground hardens after rain",
     "meaning": "hardship strengthens bonds; community batch entry 87",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 88,
@@ -789,7 +789,7 @@
     "english": "the protruding nail gets hammered",
     "meaning": "conformity pressure; community batch entry 88",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 89,
@@ -798,7 +798,7 @@
     "english": "three years on a stone",
     "meaning": "perseverance pays off; community batch entry 89",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 90,
@@ -807,7 +807,7 @@
     "english": "if in a hurry, go around",
     "meaning": "slow is smooth, smooth is fast; community batch entry 90",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 91,
@@ -816,7 +816,7 @@
     "english": "mouth is source of trouble",
     "meaning": "watch your words; community batch entry 91",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 92,
@@ -825,7 +825,7 @@
     "english": "let it flow in water",
     "meaning": "let bygones be bygones; community batch entry 92",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 93,
@@ -834,7 +834,7 @@
     "english": "sutra in a cow's ear",
     "meaning": "words falling on deaf ears; community batch entry 93",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 94,
@@ -843,7 +843,7 @@
     "english": "counting raccoon skins before hunting",
     "meaning": "don't count chickens before hatch; community batch entry 94",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 95,
@@ -852,7 +852,7 @@
     "english": "rice cake from shelf",
     "meaning": "a lucky windfall; community batch entry 95",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 96,
@@ -861,7 +861,7 @@
     "english": "a dog walking hits a stick",
     "meaning": "take action, chance appears; community batch entry 96",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 97,
@@ -870,7 +870,7 @@
     "english": "gold coin to a cat",
     "meaning": "pearls before swine; community batch entry 97",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 98,
@@ -879,7 +879,7 @@
     "english": "spirits match",
     "meaning": "to click with someone; community batch entry 98",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 99,
@@ -888,7 +888,7 @@
     "english": "make it into a tree",
     "meaning": "to worry about something; community batch entry 99",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 100,
@@ -897,7 +897,7 @@
     "english": "spirit not working",
     "meaning": "inconsiderate; community batch entry 100",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 101,
@@ -906,7 +906,7 @@
     "english": "so busy you'd borrow a cat's paw",
     "meaning": "extremely busy; community batch entry 101",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 102,
@@ -915,7 +915,7 @@
     "english": "ears grow calluses",
     "meaning": "to hear something over and over; community batch entry 102",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 103,
@@ -924,7 +924,7 @@
     "english": "even monkeys fall from trees",
     "meaning": "experts make mistakes; community batch entry 103",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 104,
@@ -933,7 +933,7 @@
     "english": "what happens twice happens thrice",
     "meaning": "bad luck repeats; community batch entry 104",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 105,
@@ -942,7 +942,7 @@
     "english": "one time one meeting",
     "meaning": "treasure each encounter; community batch entry 105",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 106,
@@ -951,7 +951,7 @@
     "english": "dumplings over flowers",
     "meaning": "practical over aesthetic; community batch entry 106",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 107,
@@ -960,7 +960,7 @@
     "english": "ground hardens after rain",
     "meaning": "hardship strengthens bonds; community batch entry 107",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 108,
@@ -969,7 +969,7 @@
     "english": "the protruding nail gets hammered",
     "meaning": "conformity pressure; community batch entry 108",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 109,
@@ -978,7 +978,7 @@
     "english": "three years on a stone",
     "meaning": "perseverance pays off; community batch entry 109",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 110,
@@ -987,7 +987,7 @@
     "english": "if in a hurry, go around",
     "meaning": "slow is smooth, smooth is fast; community batch entry 110",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 111,
@@ -996,7 +996,7 @@
     "english": "mouth is source of trouble",
     "meaning": "watch your words; community batch entry 111",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 112,
@@ -1004,8 +1004,8 @@
     "romaji": "mizu ni nagasu",
     "english": "let it flow in water",
     "meaning": "let bygones be bygones; community batch entry 112",
-    "issued": false,
-    "completed": true
+    "issued": true,
+    "completed": false
   },
   {
     "id": 113,
@@ -1014,7 +1014,7 @@
     "english": "sutra in a cow's ear",
     "meaning": "words falling on deaf ears; community batch entry 113",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 114,
@@ -1023,7 +1023,7 @@
     "english": "counting raccoon skins before hunting",
     "meaning": "don't count chickens before hatch; community batch entry 114",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 115,
@@ -1032,7 +1032,7 @@
     "english": "rice cake from shelf",
     "meaning": "a lucky windfall; community batch entry 115",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 116,
@@ -1041,7 +1041,7 @@
     "english": "a dog walking hits a stick",
     "meaning": "take action, chance appears; community batch entry 116",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 117,
@@ -1050,7 +1050,7 @@
     "english": "gold coin to a cat",
     "meaning": "pearls before swine; community batch entry 117",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 118,
@@ -1059,7 +1059,7 @@
     "english": "spirits match",
     "meaning": "to click with someone; community batch entry 118",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 119,
@@ -1068,7 +1068,7 @@
     "english": "make it into a tree",
     "meaning": "to worry about something; community batch entry 119",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 120,
@@ -1077,6 +1077,6 @@
     "english": "spirit not working",
     "meaning": "inconsiderate; community batch entry 120",
     "issued": false,
-    "completed": true
+    "completed": false
   }
 ]

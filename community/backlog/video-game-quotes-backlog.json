@@ -6,7 +6,7 @@
     "english": "I make my own path.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -16,7 +16,7 @@
     "english": "The light has not gone out.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -26,7 +26,7 @@
     "english": "We go beyond the darkness.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -36,7 +36,7 @@
     "english": "I protect my friends.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -46,7 +46,7 @@
     "english": "Come at me for real.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -56,7 +56,7 @@
     "english": "I won't hesitate anymore.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -66,7 +66,7 @@
     "english": "The real battle starts now.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -76,7 +76,7 @@
     "english": "I'll fight to the very end.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -86,7 +86,7 @@
     "english": "I will seize the future with my own hands.",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -96,7 +96,7 @@
     "english": "Let's go!",
     "game": "Final Fantasy VII",
     "character": "Sephiroth",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -106,7 +106,7 @@
     "english": "It's not over yet.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -116,7 +116,7 @@
     "english": "I can't afford to lose.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -126,7 +126,7 @@
     "english": "Let's settle this!",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -136,7 +136,7 @@
     "english": "I'll change fate.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -146,7 +146,7 @@
     "english": "This is my answer.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -156,7 +156,7 @@
     "english": "All we can do is believe.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -166,7 +166,7 @@
     "english": "Are you ready?",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -176,7 +176,7 @@
     "english": "I will never give up.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -186,7 +186,7 @@
     "english": "Now, let's begin.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -196,7 +196,7 @@
     "english": "I make my own path.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -206,7 +206,7 @@
     "english": "The light has not gone out.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -216,7 +216,7 @@
     "english": "We go beyond the darkness.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -226,7 +226,7 @@
     "english": "I protect my friends.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -236,7 +236,7 @@
     "english": "Come at me for real.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -246,7 +246,7 @@
     "english": "I won't hesitate anymore.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -256,7 +256,7 @@
     "english": "The real battle starts now.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -266,7 +266,7 @@
     "english": "I'll fight to the very end.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -276,7 +276,7 @@
     "english": "I will seize the future with my own hands.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -286,7 +286,7 @@
     "english": "Let's go!",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -296,7 +296,7 @@
     "english": "This ends here.",
     "game": "Final Fantasy X",
     "character": "Tidus",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -306,7 +306,7 @@
     "english": "I can't afford to lose.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -316,7 +316,7 @@
     "english": "Let's settle this!",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -326,7 +326,7 @@
     "english": "I'll change fate.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -336,7 +336,7 @@
     "english": "This is my answer.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -346,7 +346,7 @@
     "english": "All we can do is believe.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -356,7 +356,7 @@
     "english": "Are you ready?",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -366,7 +366,7 @@
     "english": "I will never give up.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -376,7 +376,7 @@
     "english": "Now, let's begin.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -386,7 +386,7 @@
     "english": "I make my own path.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -396,7 +396,7 @@
     "english": "The light has not gone out.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -406,7 +406,7 @@
     "english": "We go beyond the darkness.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -416,7 +416,7 @@
     "english": "I protect my friends.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -426,7 +426,7 @@
     "english": "Come at me for real.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -436,7 +436,7 @@
     "english": "I won't hesitate anymore.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -446,7 +446,7 @@
     "english": "The real battle starts now.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -456,7 +456,7 @@
     "english": "I'll fight to the very end.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -466,7 +466,7 @@
     "english": "I will seize the future with my own hands.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -476,7 +476,7 @@
     "english": "Let's go!",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -486,7 +486,7 @@
     "english": "This ends here.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -496,7 +496,7 @@
     "english": "It's not over yet.",
     "game": "Final Fantasy X",
     "character": "Auron",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -506,7 +506,7 @@
     "english": "Let's settle this!",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -516,7 +516,7 @@
     "english": "I'll change fate.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -526,7 +526,7 @@
     "english": "This is my answer.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -536,7 +536,7 @@
     "english": "All we can do is believe.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -546,7 +546,7 @@
     "english": "Are you ready?",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -556,7 +556,7 @@
     "english": "I will never give up.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -566,7 +566,7 @@
     "english": "Now, let's begin.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -576,7 +576,7 @@
     "english": "I make my own path.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -586,7 +586,7 @@
     "english": "The light has not gone out.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -596,7 +596,7 @@
     "english": "We go beyond the darkness.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -606,7 +606,7 @@
     "english": "I protect my friends.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -616,7 +616,7 @@
     "english": "Come at me for real.",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -666,7 +666,7 @@
     "english": "Let's go!",
     "game": "Kingdom Hearts",
     "character": "Sora",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -706,7 +706,7 @@
     "english": "I'll change fate.",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -726,7 +726,7 @@
     "english": "All we can do is believe.",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -736,7 +736,7 @@
     "english": "Are you ready?",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -766,7 +766,7 @@
     "english": "I make my own path.",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -826,7 +826,7 @@
     "english": "The real battle starts now.",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -836,7 +836,7 @@
     "english": "I'll fight to the very end.",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -846,7 +846,7 @@
     "english": "I will seize the future with my own hands.",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -856,7 +856,7 @@
     "english": "Let's go!",
     "game": "Kingdom Hearts",
     "character": "Riku",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -936,7 +936,7 @@
     "english": "I will never give up.",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -956,7 +956,7 @@
     "english": "I make my own path.",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -986,7 +986,7 @@
     "english": "I protect my friends.",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1006,7 +1006,7 @@
     "english": "I won't hesitate anymore.",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1016,7 +1016,7 @@
     "english": "The real battle starts now.",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1056,7 +1056,7 @@
     "english": "This ends here.",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1086,7 +1086,7 @@
     "english": "Let's settle this!",
     "game": "Metal Gear Solid",
     "character": "Solid Snake",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1106,7 +1106,7 @@
     "english": "All we can do is believe.",
     "game": "Metal Gear Solid",
     "character": "Otacon",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1136,7 +1136,7 @@
     "english": "Now, let's begin.",
     "game": "Metal Gear Solid",
     "character": "Otacon",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1166,7 +1166,7 @@
     "english": "We go beyond the darkness.",
     "game": "Metal Gear Solid",
     "character": "Otacon",
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -1196,7 +1196,7 @@
     "english": "I won't hesitate anymore.",
     "game": "Metal Gear Solid",
     "character": "Otacon",
-    "issued": true,
+    "issued": false,
     "completed": false
   }
 ]

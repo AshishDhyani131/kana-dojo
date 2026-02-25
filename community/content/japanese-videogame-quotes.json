@@ -14,10 +14,17 @@
     "character": "Riku"
   },
   {
-  "japanese": "????????",
+  "japanese": "まだ終わらない。",
   "romaji": "Mada owaranai.",
   "english": "It's not over yet.",
   "game": "Kingdom Hearts",
   "character": "Riku"
+  },
+  {
+    "japanese": "栄誉は浜辺で亡くなった",
+    "romaji": "Eiyo wa Hamabe de nakunatta",
+    "english": "Honor Died On The Beach.",
+    "game": "Ghost Of Tsushima",
+    "character": "Jin Sakai"
   }
 ]

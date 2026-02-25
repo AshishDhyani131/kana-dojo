@@ -6,7 +6,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 1.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 2.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 3.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 4,
@@ -32,8 +32,8 @@
     "do": "Receive cards with both hands and read them.",
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 4.",
-    "issued": false,
-    "completed": true
+    "issued": true,
+    "completed": false
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 5.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 6.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 7.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 8.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 9.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 10.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 11.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 12.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 13.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 14.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 15.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 16.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 17.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 18.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 19.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 20.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 21,
@@ -186,7 +186,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 21.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 22.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 23.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 24,
@@ -213,7 +213,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 24.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 25,
@@ -222,7 +222,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 25.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 26,
@@ -231,7 +231,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 26.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 27,
@@ -240,7 +240,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 27.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 28,
@@ -249,7 +249,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 28.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 29,
@@ -258,7 +258,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 29.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 30,
@@ -267,7 +267,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 30.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 31,
@@ -276,7 +276,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 31.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 32,
@@ -285,7 +285,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 32.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 33,
@@ -294,7 +294,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 33.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 34,
@@ -303,7 +303,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 34.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 35,
@@ -312,7 +312,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 35.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 36,
@@ -321,7 +321,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 36.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 37,
@@ -330,7 +330,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 37.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 38,
@@ -339,7 +339,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 38.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 39,
@@ -348,7 +348,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 39.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 40,
@@ -357,7 +357,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 40.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 41,
@@ -366,7 +366,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 41.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 42,
@@ -375,7 +375,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 42.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 43,
@@ -384,7 +384,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 43.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 44.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 45,
@@ -402,7 +402,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 45.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 46,
@@ -411,7 +411,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 46.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 47,
@@ -420,7 +420,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 47.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 48,
@@ -429,7 +429,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 48.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 49,
@@ -438,7 +438,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 49.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 50,
@@ -447,7 +447,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 50.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 51,
@@ -456,7 +456,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 51.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 52,
@@ -465,7 +465,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 52.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 53,
@@ -474,7 +474,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 53.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 54,
@@ -483,7 +483,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 54.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 55,
@@ -492,7 +492,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 55.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 56,
@@ -501,7 +501,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 56.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 57,
@@ -510,7 +510,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 57.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 58,
@@ -519,7 +519,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 58.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 59,
@@ -528,7 +528,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 59.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 60,
@@ -537,7 +537,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 60.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 61,
@@ -546,7 +546,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 61.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 62,
@@ -555,7 +555,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 62.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 63,
@@ -564,7 +564,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 63.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 64,
@@ -573,7 +573,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 64.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 65,
@@ -582,7 +582,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 65.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 66,
@@ -591,7 +591,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 66.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 67,
@@ -600,7 +600,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 67.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 68,
@@ -609,7 +609,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 68.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 69,
@@ -618,7 +618,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 69.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 70,
@@ -627,7 +627,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 70.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 71,
@@ -636,7 +636,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 71.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 72,
@@ -645,7 +645,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 72.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 73,
@@ -654,7 +654,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 73.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 74,
@@ -663,7 +663,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 74.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 75,
@@ -672,7 +672,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 75.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 76,
@@ -681,7 +681,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 76.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 77,
@@ -690,7 +690,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 77.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 78,
@@ -699,7 +699,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 78.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 79,
@@ -708,7 +708,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 79.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 80,
@@ -717,7 +717,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 80.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 81,
@@ -726,7 +726,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 81.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 82,
@@ -735,7 +735,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 82.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 83,
@@ -744,7 +744,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 83.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 84,
@@ -753,7 +753,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 84.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 85,
@@ -762,7 +762,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 85.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 86,
@@ -771,7 +771,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 86.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 87,
@@ -780,7 +780,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 87.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 88,
@@ -789,7 +789,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 88.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 89,
@@ -798,7 +798,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 89.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 90,
@@ -807,7 +807,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 90.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 91,
@@ -816,7 +816,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 91.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 92,
@@ -825,7 +825,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 92.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 93,
@@ -834,7 +834,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 93.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 94,
@@ -843,7 +843,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 94.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 95,
@@ -852,7 +852,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 95.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 96,
@@ -861,7 +861,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 96.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 97,
@@ -870,7 +870,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 97.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 98,
@@ -879,7 +879,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 98.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 99,
@@ -888,7 +888,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 99.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 100,
@@ -897,7 +897,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 100.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 101,
@@ -906,7 +906,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 101.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 102,
@@ -915,7 +915,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 102.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 103,
@@ -924,7 +924,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 103.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 104,
@@ -933,7 +933,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 104.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 105,
@@ -942,7 +942,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 105.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 106,
@@ -951,7 +951,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 106.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 107,
@@ -960,7 +960,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 107.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 108,
@@ -969,7 +969,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 108.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 109,
@@ -978,7 +978,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 109.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 110,
@@ -987,7 +987,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 110.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 111,
@@ -996,7 +996,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 111.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 112,
@@ -1005,7 +1005,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 112.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 113,
@@ -1014,7 +1014,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 113.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 114,
@@ -1023,7 +1023,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 114.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 115,
@@ -1032,7 +1032,7 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 115.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 116,
@@ -1041,7 +1041,7 @@
     "dont": "Do not walk in with shoes on.",
     "note": "Shows respect for the host. Entry 116.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 117,
@@ -1050,7 +1050,7 @@
     "dont": "Do not talk loudly or block doors.",
     "note": "Public quiet is expected. Entry 117.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 118,
@@ -1059,7 +1059,7 @@
     "dont": "Do not open a gift immediately unless invited.",
     "note": "Politeness conventions vary by context. Entry 118.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 119,
@@ -1068,7 +1068,7 @@
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 119.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 120,
@@ -1077,6 +1077,6 @@
     "dont": "Do not be disruptive during prayer.",
     "note": "Follow posted rules and flow. Entry 120.",
     "issued": false,
-    "completed": true
+    "completed": false
   }
 ]

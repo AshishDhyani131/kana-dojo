@@ -101,6 +101,11 @@ input[type='checkbox']:focus-visible {
   outline: none;
 }
 
+/* Game inputs override outline color to secondary */
+.game-input:focus-visible {
+  outline-color: var(--secondary-color) !important;
+}
+
 :root {
   /* Default theme (using light theme as default) */
   --background-color: hsla(210, 17%, 100%, 1);

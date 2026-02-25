@@ -8,6 +8,21 @@ import AchievementProgress from '@/features/Achievements/components';
 import { TrendingUp, Flame, Trophy } from 'lucide-react';
 import { useClick } from '@/shared/hooks/useAudio';
 import { cn } from '@/shared/lib/utils';
+import dynamic from 'next/dynamic';
+
+const isDevOrPreview =
+  process.env.NODE_ENV === 'development' ||
+  process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
+
+const DevAchievementPreview = isDevOrPreview
+  ? dynamic(
+      () =>
+        import(
+          '@/features/Achievements/components/dev/DevAchievementPreview'
+        ),
+      { ssr: false },
+    )
+  : null;
 
 type ViewType = 'statistics' | 'streak' | 'achievements';
 
@@ -38,6 +53,7 @@ const ProgressTabs = () => {
 
   return (
     <div className='flex flex-col gap-8'>
+      {DevAchievementPreview && <DevAchievementPreview />}
       {/* View Toggle Switch with smooth sliding animation */}
       <div className='flex justify-center px-2'>
         <div

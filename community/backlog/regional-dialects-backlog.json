@@ -7,7 +7,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 1",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 2",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 3",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 4",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 5",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 6",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 7",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 8",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 9",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 10",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 11",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 12",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 13",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 14",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 15,
@@ -147,7 +147,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 15",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 16",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 17",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 18,
@@ -177,7 +177,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 18",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 19,
@@ -187,7 +187,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 19",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 20",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 21,
@@ -207,7 +207,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 21",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 22",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 23,
@@ -227,7 +227,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 23",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 24,
@@ -237,7 +237,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 24",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 25,
@@ -247,7 +247,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 25",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 26,
@@ -257,7 +257,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 26",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 27,
@@ -267,7 +267,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 27",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 28,
@@ -277,7 +277,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 28",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 29,
@@ -287,7 +287,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 29",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 30,
@@ -297,7 +297,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 30",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 31,
@@ -307,7 +307,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 31",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 32,
@@ -317,7 +317,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 32",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 33,
@@ -327,7 +327,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 33",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 34,
@@ -337,7 +337,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 34",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 35,
@@ -347,7 +347,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 35",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 36,
@@ -357,7 +357,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 36",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 37,
@@ -367,7 +367,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 37",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 38,
@@ -377,7 +377,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 38",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 39,
@@ -387,7 +387,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 39",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 40,
@@ -397,7 +397,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 40",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 41,
@@ -407,7 +407,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 41",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 42,
@@ -417,7 +417,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 42",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 43,
@@ -427,7 +427,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 43",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 44,
@@ -437,7 +437,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 44",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 45,
@@ -447,7 +447,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 45",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 46,
@@ -457,7 +457,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 46",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 47,
@@ -467,7 +467,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 47",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 48,
@@ -477,7 +477,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 48",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 49,
@@ -487,7 +487,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 49",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 50,
@@ -497,7 +497,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 50",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 51,
@@ -507,7 +507,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 51",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 52,
@@ -517,7 +517,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 52",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 53,
@@ -527,7 +527,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 53",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 54,
@@ -537,7 +537,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 54",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 55,
@@ -547,7 +547,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 55",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 56,
@@ -557,7 +557,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 56",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 57,
@@ -567,7 +567,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 57",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 58,
@@ -577,7 +577,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 58",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 59,
@@ -587,7 +587,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 59",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 60,
@@ -597,7 +597,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 60",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 61,
@@ -607,7 +607,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 61",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 62,
@@ -617,7 +617,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 62",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 63,
@@ -627,7 +627,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 63",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 64,
@@ -637,7 +637,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 64",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 65,
@@ -647,7 +647,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 65",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 66,
@@ -657,7 +657,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 66",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 67,
@@ -667,7 +667,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 67",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 68,
@@ -677,7 +677,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 68",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 69,
@@ -687,7 +687,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 69",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 70,
@@ -697,7 +697,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 70",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 71,
@@ -707,7 +707,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 71",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 72,
@@ -717,7 +717,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 72",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 73,
@@ -727,7 +727,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 73",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 74,
@@ -737,7 +737,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 74",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 75,
@@ -747,7 +747,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 75",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 76,
@@ -757,7 +757,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 76",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 77,
@@ -767,7 +767,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 77",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 78,
@@ -777,7 +777,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 78",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 79,
@@ -787,7 +787,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 79",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 80,
@@ -797,7 +797,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 80",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 81,
@@ -807,7 +807,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 81",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 82,
@@ -817,7 +817,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 82",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 83,
@@ -827,7 +827,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 83",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 84,
@@ -837,7 +837,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 84",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 85,
@@ -847,7 +847,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 85",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 86,
@@ -857,7 +857,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 86",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 87,
@@ -867,7 +867,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 87",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 88,
@@ -877,7 +877,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 88",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 89,
@@ -887,7 +887,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 89",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 90,
@@ -897,7 +897,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 90",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 91,
@@ -907,7 +907,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 91",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 92,
@@ -917,7 +917,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 92",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 93,
@@ -927,7 +927,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 93",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 94,
@@ -937,7 +937,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 94",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 95,
@@ -947,7 +947,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 95",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 96,
@@ -957,7 +957,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 96",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 97,
@@ -967,7 +967,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 97",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 98,
@@ -977,7 +977,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 98",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 99,
@@ -987,7 +987,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 99",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 100,
@@ -997,7 +997,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 100",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 101,
@@ -1007,7 +1007,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 101",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 102,
@@ -1017,7 +1017,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 102",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 103,
@@ -1027,7 +1027,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 103",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 104,
@@ -1037,7 +1037,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 104",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 105,
@@ -1047,7 +1047,7 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 105",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 106,
@@ -1057,7 +1057,7 @@
     "region": "Kansai",
     "note": "casual thanks used in Kansai; community batch entry 106",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 107,
@@ -1067,7 +1067,7 @@
     "region": "Kansai",
     "note": "common Kansai emphasis word; community batch entry 107",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 108,
@@ -1077,7 +1077,7 @@
     "region": "Kansai",
     "note": "very common in Kansai speech; community batch entry 108",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 109,
@@ -1087,7 +1087,7 @@
     "region": "Kansai",
     "note": "comic tsukkomi phrase; community batch entry 109",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 110,
@@ -1097,7 +1097,7 @@
     "region": "Okinawa",
     "note": "Okinawan greeting; community batch entry 110",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 111,
@@ -1107,7 +1107,7 @@
     "region": "Okinawa",
     "note": "optimistic Okinawan expression; community batch entry 111",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 112,
@@ -1117,7 +1117,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido intensifier; community batch entry 112",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 113,
@@ -1127,7 +1127,7 @@
     "region": "Hokkaido",
     "note": "Hokkaido winter expression; community batch entry 113",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 114,
@@ -1137,7 +1137,7 @@
     "region": "Kyushu",
     "note": "seen in Kyushu dialects; community batch entry 114",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 115,
@@ -1147,7 +1147,7 @@
     "region": "Kyushu",
     "note": "positive adjective in Kyushu; community batch entry 115",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 116,
@@ -1157,7 +1157,7 @@
     "region": "Shizuoka",
     "note": "sentence ending in Shizuoka area; community batch entry 116",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 117,
@@ -1167,7 +1167,7 @@
     "region": "Yamanashi",
     "note": "Yamanashi flavor ending; community batch entry 117",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 118,
@@ -1177,7 +1177,7 @@
     "region": "Kyoto",
     "note": "polite Kyoto softening; community batch entry 118",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 119,
@@ -1187,7 +1187,7 @@
     "region": "Yamanashi",
     "note": "regional ending marker; community batch entry 119",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 120,
@@ -1197,6 +1197,6 @@
     "region": "Tohoku",
     "note": "request form in some Tohoku areas; community batch entry 120",
     "issued": false,
-    "completed": true
+    "completed": false
   }
 ]

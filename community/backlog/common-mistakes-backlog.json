@@ -5,7 +5,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 1.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 2.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 3.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 4.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 5.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 6.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 7.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 8.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 9,
@@ -69,15 +69,15 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 9.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 10,
     "wrong": "??????????????????",
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 10.",
-    "issued": false,
-    "completed": true
+    "issued": true,
+    "completed": false
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 11.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 12.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 13.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 14.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 15.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 16.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 17.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 18.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 19.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 20.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 21.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 22.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 23.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 24.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 25.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 26.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 27.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 28.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 29,
@@ -229,7 +229,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 29.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 30,
@@ -237,7 +237,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 30.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 31,
@@ -245,7 +245,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 31.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 32,
@@ -253,7 +253,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 32.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 33,
@@ -261,7 +261,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 33.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 34,
@@ -269,7 +269,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 34.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 35,
@@ -277,7 +277,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 35.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 36,
@@ -285,7 +285,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 36.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 37,
@@ -293,7 +293,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 37.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 38,
@@ -301,7 +301,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 38.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 39,
@@ -309,7 +309,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 39.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 40,
@@ -317,7 +317,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 40.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 41,
@@ -325,7 +325,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 41.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 42,
@@ -333,7 +333,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 42.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 43,
@@ -341,7 +341,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 43.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 44,
@@ -349,7 +349,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 44.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 45,
@@ -357,7 +357,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 45.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 46,
@@ -365,7 +365,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 46.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 47,
@@ -373,7 +373,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 47.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 48,
@@ -381,7 +381,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 48.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 49,
@@ -389,7 +389,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 49.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 50,
@@ -397,7 +397,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 50.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 51,
@@ -405,7 +405,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 51.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 52,
@@ -413,7 +413,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 52.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 53,
@@ -421,7 +421,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 53.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 54,
@@ -429,7 +429,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 54.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 55,
@@ -437,7 +437,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 55.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 56,
@@ -445,7 +445,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 56.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 57,
@@ -453,7 +453,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 57.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 58,
@@ -461,7 +461,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 58.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 59,
@@ -469,7 +469,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 59.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 60,
@@ -477,7 +477,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 60.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 61,
@@ -485,7 +485,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 61.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 62,
@@ -493,7 +493,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 62.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 63,
@@ -501,7 +501,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 63.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 64,
@@ -509,7 +509,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 64.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 65,
@@ -517,7 +517,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 65.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 66,
@@ -525,7 +525,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 66.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 67,
@@ -533,7 +533,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 67.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 68,
@@ -541,7 +541,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 68.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 69,
@@ -549,7 +549,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 69.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 70,
@@ -557,7 +557,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 70.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 71,
@@ -565,7 +565,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 71.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 72,
@@ -573,7 +573,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 72.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 73,
@@ -581,7 +581,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 73.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 74,
@@ -589,7 +589,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 74.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 75,
@@ -597,7 +597,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 75.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 76,
@@ -605,7 +605,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 76.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 77,
@@ -613,7 +613,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 77.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 78,
@@ -621,7 +621,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 78.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 79,
@@ -629,7 +629,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 79.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 80,
@@ -637,7 +637,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 80.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 81,
@@ -645,7 +645,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 81.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 82,
@@ -653,7 +653,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 82.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 83,
@@ -661,7 +661,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 83.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 84,
@@ -669,7 +669,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 84.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 85,
@@ -677,7 +677,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 85.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 86,
@@ -685,7 +685,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 86.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 87,
@@ -693,7 +693,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 87.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 88,
@@ -701,7 +701,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 88.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 89,
@@ -709,7 +709,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 89.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 90,
@@ -717,7 +717,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 90.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 91,
@@ -725,7 +725,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 91.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 92,
@@ -733,7 +733,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 92.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 93,
@@ -741,7 +741,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 93.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 94,
@@ -749,7 +749,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 94.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 95,
@@ -757,7 +757,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 95.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 96,
@@ -765,7 +765,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 96.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 97,
@@ -773,7 +773,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 97.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 98,
@@ -781,7 +781,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 98.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 99,
@@ -789,7 +789,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 99.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 100,
@@ -797,7 +797,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 100.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 101,
@@ -805,7 +805,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 101.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 102,
@@ -813,7 +813,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 102.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 103,
@@ -821,7 +821,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 103.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 104,
@@ -829,7 +829,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 104.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 105,
@@ -837,7 +837,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 105.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 106,
@@ -845,7 +845,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 106.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 107,
@@ -853,7 +853,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 107.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 108,
@@ -861,7 +861,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 108.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 109,
@@ -869,7 +869,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 109.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 110,
@@ -877,7 +877,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 110.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 111,
@@ -885,7 +885,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 111.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 112,
@@ -893,7 +893,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 112.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 113,
@@ -901,7 +901,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 113.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 114,
@@ -909,7 +909,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 114.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 115,
@@ -917,7 +917,7 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 115.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 116,
@@ -925,7 +925,7 @@
     "correct": "??????????????",
     "explanation": "Use adverb \"???\" with \"??\". Entry 116.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 117,
@@ -933,7 +933,7 @@
     "correct": "?????????????????????",
     "explanation": "Prefer explicit verb for naturalness. Entry 117.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 118,
@@ -941,7 +941,7 @@
     "correct": "?????????????????",
     "explanation": "Choose causal form/register carefully. Entry 118.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 119,
@@ -949,7 +949,7 @@
     "correct": "???????????????",
     "explanation": "Avoid unintended question intonation. Entry 119.",
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "id": 120,
@@ -957,6 +957,6 @@
     "correct": "????????????????",
     "explanation": "Drop redundant subject when obvious. Entry 120.",
     "issued": false,
-    "completed": true
+    "completed": false
   }
 ]

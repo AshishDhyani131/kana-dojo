@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pull-requests: write
 
 # Prevent race conditions with other community workflows
 concurrency:
@@ -23,12 +24,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
 
       - name: Process stale community issues
         id: stale-check
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
           script: |
             const fs = require('fs');
             const templates = require('./.github/templates/messages.cjs');
@@ -70,7 +73,7 @@ jobs:
             const now = new Date();
             const WARNING_THRESHOLD_MS = templates.config.staleWarningAfterMs;   // 12 hours
             const CLOSE_THRESHOLD_MS = templates.config.staleCloseAfterMs;       // 18 hours
-            const UNASSIGNED_CLOSE_THRESHOLD_MS = 6 * 60 * 60 * 1000; // 6 hours
+            const UNASSIGNED_CLOSE_THRESHOLD_MS = 10 * 60 * 60 * 1000; // 10 hours
 
             let needsCommit = false;
             let themes = JSON.parse(fs.readFileSync(themeBacklogPath, 'utf8'));
@@ -96,9 +99,9 @@ jobs:
 
             function reenableBacklogItem(title, sourceLabel) {
               const sourceTag = sourceLabel ? ` (${sourceLabel})` : '';
-              if (title.includes('Add New Color Theme:')) {
-                // Extract theme name from title like: "[Good First Issue] 🎨 Add New Color Theme: Neon Sakura (good first issue)"
-                const themeMatch = title.match(/Add New Color Theme:\s*(.+?)\s*\(good first issue\)/i);
+              if (title.includes('Add New Color Theme:') || title.includes('Add Theme:')) {
+                // Extract theme name from title (old and new format)
+                const themeMatch = title.match(/Add (?:New Color )?Theme:\s*(.+?)\s*(?:—|\(good)/i);
                 if (themeMatch) {
                   const themeName = themeMatch[1].trim();
                   const themeIndex = themes.findIndex(function(t) { return t.name === themeName; });
@@ -136,7 +139,7 @@ jobs:
                     console.log(`Proverb #${proverbId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Classic Japanese Haiku #')) {
+              } else if (title.includes('Add Classic Japanese Haiku #') || title.includes('Add Japanese Haiku #')) {
                 const haikuIdMatch = title.match(/#(\d+)/);
                 if (haikuIdMatch) {
                   const haikuId = parseInt(haikuIdMatch[1]);
@@ -149,7 +152,7 @@ jobs:
                     console.log(`Haiku #${haikuId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add New Trivia Question #')) {
+              } else if (title.includes('Add New Trivia Question #') || title.includes('Add Trivia Question #')) {
                 const triviaIdMatch = title.match(/#(\d+)/);
                 if (triviaIdMatch) {
                   const triviaId = parseInt(triviaIdMatch[1]);
@@ -162,7 +165,7 @@ jobs:
                     console.log(`Trivia #${triviaId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add New Grammar Point #')) {
+              } else if (title.includes('Add New Grammar Point #') || title.includes('Add Grammar Point #')) {
                 const grammarIdMatch = title.match(/#(\d+)/);
                 if (grammarIdMatch) {
                   const grammarId = parseInt(grammarIdMatch[1]);
@@ -175,7 +178,7 @@ jobs:
                     console.log(`Grammar #${grammarId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Famous Anime Quote #')) {
+              } else if (title.includes('Add Famous Anime Quote #') || title.includes('Add Anime Quote #')) {
                 const quoteIdMatch = title.match(/#(\d+)/);
                 if (quoteIdMatch) {
                   const quoteId = parseInt(quoteIdMatch[1]);
@@ -188,7 +191,7 @@ jobs:
                     console.log(`Anime quote #${quoteId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add New Japanese Idiom #')) {
+              } else if (title.includes('Add New Japanese Idiom #') || title.includes('Add Japanese Idiom #')) {
                 const idiomIdMatch = title.match(/#(\d+)/);
                 if (idiomIdMatch) {
                   const idiomId = parseInt(idiomIdMatch[1]);
@@ -201,7 +204,7 @@ jobs:
                     console.log(`Idiom #${idiomId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Regional Dialect Entry #')) {
+              } else if (title.includes('Add Regional Dialect Entry #') || title.includes('Add Dialect Entry #')) {
                 const dialectIdMatch = title.match(/#(\d+)/);
                 if (dialectIdMatch) {
                   const dialectId = parseInt(dialectIdMatch[1]);
@@ -214,7 +217,7 @@ jobs:
                     console.log(`Regional dialect #${dialectId} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Japanese False Friend #')) {
+              } else if (title.includes('Add Japanese False Friend #') || title.includes('Add False Friend Pair #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -227,7 +230,7 @@ jobs:
                     console.log(`False friend #${id} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Japanese Cultural Etiquette Tip #')) {
+              } else if (title.includes('Add Japanese Cultural Etiquette Tip #') || title.includes('Add Etiquette Tip #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -240,7 +243,7 @@ jobs:
                     console.log(`Cultural etiquette #${id} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Japanese Example Sentence #')) {
+              } else if (title.includes('Add Japanese Example Sentence #') || title.includes('Add Example Sentence #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -253,7 +256,7 @@ jobs:
                     console.log(`Example sentence #${id} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Common Japanese Learner Mistake #')) {
+              } else if (title.includes('Add Common Japanese Learner Mistake #') || title.includes('Add Learner Mistake #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -266,7 +269,7 @@ jobs:
                     console.log(`Common mistake #${id} is already completed, not re-enabling`);
                   }
                 }
-              } else if (title.includes('Add Famous Japanese Video Game Quote #')) {
+              } else if (title.includes('Add Famous Japanese Video Game Quote #') || title.includes('Add Video Game Quote #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -297,7 +300,7 @@ jobs:
                     repo: context.repo.repo,
                     issue_number: issue.number,
                     state: 'closed',
-                    state_reason: 'completed'
+                    state_reason: 'not_planned'
                   });
                 } else {
                   // Leave unassigned issues quiet until auto-close to avoid noisy bot comments
@@ -381,14 +384,55 @@ jobs:
             }
 
       - name: Commit backlog updates
+        id: commit-backlog
         if: steps.stale-check.outputs.needs_commit == 'true'
-        run: |
-          git add community/backlog/
-          if git diff --cached --quiet; then
-            echo "No backlog changes to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(automation): re-enable stale items in backlog"
-          git push
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          add-paths: |
+            community/backlog/
+          commit-message: 'chore(automation): re-enable stale items in backlog'
+          branch: automation/community-data/stale-${{ github.run_id }}
+          title: 'chore(automation): update community backlog'
+          body: Automated update to community backlog state.
+          base: main
+          delete-branch: true
+
+      - name: Merge backlog PR
+        if: steps.stale-check.outputs.needs_commit == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          script: |
+            const prNumber = Number(process.env.PR_NUMBER);
+            if (!prNumber) {
+              console.log('No PR was created; nothing to merge');
+              return;
+            }
+            async function sleep(ms) { return new Promise(function(resolve) { setTimeout(resolve, ms); }); }
+            const MAX_RETRIES = 10;
+            for (let i = 1; i <= MAX_RETRIES; i += 1) {
+              try {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  merge_method: 'squash'
+                });
+                console.log('Merged backlog PR #' + prNumber);
+                return;
+              } catch (e) {
+                console.log('Merge attempt ' + i + ' failed: ' + e.message);
+                if (e.status === 409) {
+                  try {
+                    await github.rest.pulls.updateBranch({ owner: context.repo.owner, repo: context.repo.repo, pull_number: prNumber });
+                  } catch (updateErr) {
+                    console.log('Could not update branch: ' + updateErr.message);
+                  }
+                }
+                if (i < MAX_RETRIES) { await sleep(2000); }
+              }
+            }
+            throw new Error('Failed to merge backlog PR #' + prNumber);
+        env:
+          PR_NUMBER: ${{ steps.commit-backlog.outputs.pull-request-number }}

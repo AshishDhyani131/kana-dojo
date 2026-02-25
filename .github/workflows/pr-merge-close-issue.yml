@@ -6,7 +6,7 @@ on:
 
 permissions:
   issues: write
-  pull-requests: read
+  pull-requests: write
   contents: write
 
 # Prevent overlapping runs for the same PR
@@ -25,12 +25,14 @@ jobs:
     steps:
       - name: Checkout for templates
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
 
       - name: Find and close related issue
         id: close-issue
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
           script: |
             const fs = require('fs');
             const templates = require('./.github/templates/messages.cjs');
@@ -116,8 +118,12 @@ jobs:
                 
                 if (themeName) {
                   console.log(`Looking for theme issue: ${themeName}`);
-                  const matches = await searchOpenCommunityIssues(`"Add New Color Theme:" "${themeName}"`);
-                  if (matches.length > 0) {
+                  const matches = await searchOpenCommunityIssues(`"Add Theme:" "${themeName}"`);
+                  if (matches.length === 0) {
+                    // Fallback: try old title format for pre-migration issues
+                    const oldMatches = await searchOpenCommunityIssues(`"Add New Color Theme:" "${themeName}"`);
+                    if (oldMatches.length > 0) { targetIssue = oldMatches[0].number; }
+                  } else {
                     targetIssue = matches[0].number;
                     console.log(`Found matching theme issue: #${targetIssue}`);
                   }
@@ -148,110 +154,116 @@ jobs:
                 const haikuIdMatch = prTitle.match(/#(\d+)/);
                 const haikuId = haikuIdMatch ? haikuIdMatch[1] : null;
                 if (haikuId) {
-                  const matches = await searchOpenCommunityIssues(`"Add Classic Japanese Haiku #${haikuId}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Japanese Haiku #${haikuId}"`);
+                  if (matches.length === 0) {
+                    const oldMatches = await searchOpenCommunityIssues(`"Add Classic Japanese Haiku #${haikuId}"`);
+                    if (oldMatches.length > 0) { targetIssue = oldMatches[0].number; }
+                  } else { targetIssue = matches[0].number; }
                 }
               } else if (isTriviaContribution) {
                 const triviaIdMatch = prTitle.match(/#(\d+)/);
                 const triviaId = triviaIdMatch ? triviaIdMatch[1] : null;
                 if (triviaId) {
                   console.log(`Looking for trivia issue: #${triviaId}`);
-                  const matches = await searchOpenCommunityIssues(`"Add New Trivia Question #${triviaId}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                    console.log(`Found matching trivia issue: #${targetIssue}`);
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Trivia Question #${triviaId}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add New Trivia Question #${triviaId}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; console.log(`Found matching trivia issue: #${targetIssue}`); }
+                  } else { targetIssue = matches[0].number; console.log(`Found matching trivia issue: #${targetIssue}`); }
                 }
               } else if (isGrammarContribution) {
                 const grammarIdMatch = prTitle.match(/#(\d+)/);
                 const grammarId = grammarIdMatch ? grammarIdMatch[1] : null;
                 if (grammarId) {
                   console.log(`Looking for grammar issue: #${grammarId}`);
-                  const matches = await searchOpenCommunityIssues(`"Add New Grammar Point #${grammarId}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                    console.log(`Found matching grammar issue: #${targetIssue}`);
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Grammar Point #${grammarId}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add New Grammar Point #${grammarId}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; console.log(`Found matching grammar issue: #${targetIssue}`); }
+                  } else { targetIssue = matches[0].number; console.log(`Found matching grammar issue: #${targetIssue}`); }
                 }
               } else if (isAnimeQuoteContribution) {
                 const quoteIdMatch = prTitle.match(/#(\d+)/);
                 const quoteId = quoteIdMatch ? quoteIdMatch[1] : null;
                 if (quoteId) {
                   console.log(`Looking for anime quote issue: #${quoteId}`);
-                  const matches = await searchOpenCommunityIssues(`"Add Famous Anime Quote #${quoteId}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                    console.log(`Found matching anime quote issue: #${targetIssue}`);
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Anime Quote #${quoteId}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Famous Anime Quote #${quoteId}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; console.log(`Found matching anime quote issue: #${targetIssue}`); }
+                  } else { targetIssue = matches[0].number; console.log(`Found matching anime quote issue: #${targetIssue}`); }
                 }
               } else if (isIdiomContribution) {
                 const idiomIdMatch = prTitle.match(/#(\d+)/);
                 const idiomId = idiomIdMatch ? idiomIdMatch[1] : null;
                 if (idiomId) {
                   console.log(`Looking for idiom issue: #${idiomId}`);
-                  const matches = await searchOpenCommunityIssues(`"Add New Japanese Idiom #${idiomId}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                    console.log(`Found matching idiom issue: #${targetIssue}`);
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Japanese Idiom #${idiomId}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add New Japanese Idiom #${idiomId}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; console.log(`Found matching idiom issue: #${targetIssue}`); }
+                  } else { targetIssue = matches[0].number; console.log(`Found matching idiom issue: #${targetIssue}`); }
                 }
               } else if (isRegionalDialectContribution) {
                 const dialectIdMatch = prTitle.match(/#(\d+)/);
                 const dialectId = dialectIdMatch ? dialectIdMatch[1] : null;
                 if (dialectId) {
                   console.log(`Looking for regional dialect issue: #${dialectId}`);
-                  const matches = await searchOpenCommunityIssues(`"Add Regional Dialect Entry #${dialectId}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                    console.log(`Found matching regional dialect issue: #${targetIssue}`);
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Dialect Entry #${dialectId}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Regional Dialect Entry #${dialectId}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; console.log(`Found matching regional dialect issue: #${targetIssue}`); }
+                  } else { targetIssue = matches[0].number; console.log(`Found matching regional dialect issue: #${targetIssue}`); }
                 }
               } else if (isFalseFriendContribution) {
                 const idMatch = prTitle.match(/#(\d+)/);
                 const id = idMatch ? idMatch[1] : null;
                 if (id) {
-                  const matches = await searchOpenCommunityIssues(`"Add Japanese False Friend #${id}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add False Friend Pair #${id}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Japanese False Friend #${id}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; }
+                  } else { targetIssue = matches[0].number; }
                 }
               } else if (isCulturalEtiquetteContribution) {
                 const idMatch = prTitle.match(/#(\d+)/);
                 const id = idMatch ? idMatch[1] : null;
                 if (id) {
-                  const matches = await searchOpenCommunityIssues(`"Add Japanese Cultural Etiquette Tip #${id}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Etiquette Tip #${id}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Japanese Cultural Etiquette Tip #${id}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; }
+                  } else { targetIssue = matches[0].number; }
                 }
               } else if (isExampleSentenceContribution) {
                 const idMatch = prTitle.match(/#(\d+)/);
                 const id = idMatch ? idMatch[1] : null;
                 if (id) {
-                  const matches = await searchOpenCommunityIssues(`"Add Japanese Example Sentence #${id}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Example Sentence #${id}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Japanese Example Sentence #${id}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; }
+                  } else { targetIssue = matches[0].number; }
                 }
               } else if (isCommonMistakeContribution) {
                 const idMatch = prTitle.match(/#(\d+)/);
                 const id = idMatch ? idMatch[1] : null;
                 if (id) {
-                  const matches = await searchOpenCommunityIssues(`"Add Common Japanese Learner Mistake #${id}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Learner Mistake #${id}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Common Japanese Learner Mistake #${id}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; }
+                  } else { targetIssue = matches[0].number; }
                 }
               } else if (isVideoGameQuoteContribution) {
                 const idMatch = prTitle.match(/#(\d+)/);
                 const id = idMatch ? idMatch[1] : null;
                 if (id) {
-                  const matches = await searchOpenCommunityIssues(`"Add Famous Japanese Video Game Quote #${id}"`);
-                  if (matches.length > 0) {
-                    targetIssue = matches[0].number;
-                  }
+                  const matches = await searchOpenCommunityIssues(`"Add Video Game Quote #${id}"`);
+                  if (matches.length === 0) {
+                    const old = await searchOpenCommunityIssues(`"Add Famous Japanese Video Game Quote #${id}"`);
+                    if (old.length > 0) { targetIssue = old[0].number; }
+                  } else { targetIssue = matches[0].number; }
                 }
               }
             }
@@ -292,7 +304,7 @@ jobs:
                   // Prefer extracting theme name from the issue title
                   let themeName = null;
 
-                  const issueThemeMatch = issueTitle.match(/Add New Color Theme:\s*(.+?)(?:\s*\(|$)/i);
+                  const issueThemeMatch = issueTitle.match(/Add (?:New Color )?Theme:\s*(.+?)(?:\s*(?:—|\()|$)/i);
                   if (issueThemeMatch) {
                     themeName = issueThemeMatch[1].trim();
                   }
@@ -315,6 +327,7 @@ jobs:
                       return th.name.toLowerCase() === themeName.toLowerCase();
                     });
                     if (themeIndex !== -1) {
+                      themes[themeIndex].issued = false;
                       themes[themeIndex].completed = true;
                       themes[themeIndex].completedBy = prAuthor;
                       themes[themeIndex].completedPR = prNumber;
@@ -332,6 +345,7 @@ jobs:
                   if (factId !== null) {
                     const factIndex = facts.findIndex(function(f) { return f.id === factId; });
                     if (factIndex !== -1) {
+                      facts[factIndex].issued = false;
                       facts[factIndex].completed = true;
                       facts[factIndex].completedBy = prAuthor;
                       facts[factIndex].completedPR = prNumber;
@@ -349,6 +363,7 @@ jobs:
                   if (proverbId !== null) {
                     const proverbIndex = proverbs.findIndex(function(p) { return p.id === proverbId; });
                     if (proverbIndex !== -1) {
+                      proverbs[proverbIndex].issued = false;
                       proverbs[proverbIndex].completed = true;
                       proverbs[proverbIndex].completedBy = prAuthor;
                       proverbs[proverbIndex].completedPR = prNumber;
@@ -359,13 +374,14 @@ jobs:
                   }
                 } else if (isHaikuContribution) {
                   const haikuItems = JSON.parse(fs.readFileSync(haikuBacklogPath, 'utf8'));
-                  const issueHaikuMatch = issueTitle.match(/Add Classic Japanese Haiku\s*#(\d+)/i);
+                  const issueHaikuMatch = issueTitle.match(/Add (?:Classic )?Japanese Haiku\s*#(\d+)/i);
                   const prHaikuMatch = prTitle.match(/#(\d+)/);
                   const haikuId = issueHaikuMatch ? parseInt(issueHaikuMatch[1]) : (prHaikuMatch ? parseInt(prHaikuMatch[1]) : null);
 
                   if (haikuId !== null) {
                     const haikuIndex = haikuItems.findIndex(function(h) { return h.id === haikuId; });
                     if (haikuIndex !== -1) {
+                      haikuItems[haikuIndex].issued = false;
                       haikuItems[haikuIndex].completed = true;
                       haikuItems[haikuIndex].completedBy = prAuthor;
                       haikuItems[haikuIndex].completedPR = prNumber;
@@ -376,13 +392,14 @@ jobs:
                   }
                 } else if (isTriviaContribution) {
                   const trivia = JSON.parse(fs.readFileSync(triviaBacklogPath, 'utf8'));
-                  const issueTriviaMatch = issueTitle.match(/Add New Trivia Question\s*#(\d+)/i);
+                  const issueTriviaMatch = issueTitle.match(/Add (?:New )?Trivia Question\s*#(\d+)/i);
                   const prTriviaMatch = prTitle.match(/#(\d+)/);
                   const triviaId = issueTriviaMatch ? parseInt(issueTriviaMatch[1]) : (prTriviaMatch ? parseInt(prTriviaMatch[1]) : null);
 
                   if (triviaId !== null) {
                     const triviaIndex = trivia.findIndex(function(q) { return q.id === triviaId; });
                     if (triviaIndex !== -1) {
+                      trivia[triviaIndex].issued = false;
                       trivia[triviaIndex].completed = true;
                       trivia[triviaIndex].completedBy = prAuthor;
                       trivia[triviaIndex].completedPR = prNumber;
@@ -393,13 +410,14 @@ jobs:
                   }
                 } else if (isGrammarContribution) {
                   const grammar = JSON.parse(fs.readFileSync(grammarBacklogPath, 'utf8'));
-                  const issueGrammarMatch = issueTitle.match(/Add New Grammar Point\s*#(\d+)/i);
+                  const issueGrammarMatch = issueTitle.match(/Add (?:New )?Grammar Point\s*#(\d+)/i);
                   const prGrammarMatch = prTitle.match(/#(\d+)/);
                   const grammarId = issueGrammarMatch ? parseInt(issueGrammarMatch[1]) : (prGrammarMatch ? parseInt(prGrammarMatch[1]) : null);
 
                   if (grammarId !== null) {
                     const grammarIndex = grammar.findIndex(function(g) { return g.id === grammarId; });
                     if (grammarIndex !== -1) {
+                      grammar[grammarIndex].issued = false;
                       grammar[grammarIndex].completed = true;
                       grammar[grammarIndex].completedBy = prAuthor;
                       grammar[grammarIndex].completedPR = prNumber;
@@ -410,13 +428,14 @@ jobs:
                   }
                 } else if (isAnimeQuoteContribution) {
                   const animeQuotes = JSON.parse(fs.readFileSync(animeQuotesBacklogPath, 'utf8'));
-                  const issueQuoteMatch = issueTitle.match(/Add Famous Anime Quote\s*#(\d+)/i);
+                  const issueQuoteMatch = issueTitle.match(/Add (?:Famous )?Anime Quote\s*#(\d+)/i);
                   const prQuoteMatch = prTitle.match(/#(\d+)/);
                   const quoteId = issueQuoteMatch ? parseInt(issueQuoteMatch[1]) : (prQuoteMatch ? parseInt(prQuoteMatch[1]) : null);
 
                   if (quoteId !== null) {
                     const quoteIndex = animeQuotes.findIndex(function(q) { return q.id === quoteId; });
                     if (quoteIndex !== -1) {
+                      animeQuotes[quoteIndex].issued = false;
                       animeQuotes[quoteIndex].completed = true;
                       animeQuotes[quoteIndex].completedBy = prAuthor;
                       animeQuotes[quoteIndex].completedPR = prNumber;
@@ -427,13 +446,14 @@ jobs:
                   }
                 } else if (isIdiomContribution) {
                   const idioms = JSON.parse(fs.readFileSync(idiomsBacklogPath, 'utf8'));
-                  const issueIdiomMatch = issueTitle.match(/Add New Japanese Idiom\s*#(\d+)/i);
+                  const issueIdiomMatch = issueTitle.match(/Add (?:New )?Japanese Idiom\s*#(\d+)/i);
                   const prIdiomMatch = prTitle.match(/#(\d+)/);
                   const idiomId = issueIdiomMatch ? parseInt(issueIdiomMatch[1]) : (prIdiomMatch ? parseInt(prIdiomMatch[1]) : null);
 
                   if (idiomId !== null) {
                     const idiomIndex = idioms.findIndex(function(i) { return i.id === idiomId; });
                     if (idiomIndex !== -1) {
+                      idioms[idiomIndex].issued = false;
                       idioms[idiomIndex].completed = true;
                       idioms[idiomIndex].completedBy = prAuthor;
                       idioms[idiomIndex].completedPR = prNumber;
@@ -444,13 +464,14 @@ jobs:
                   }
                 } else if (isRegionalDialectContribution) {
                   const regionalDialects = JSON.parse(fs.readFileSync(regionalDialectsBacklogPath, 'utf8'));
-                  const issueDialectMatch = issueTitle.match(/Add Regional Dialect Entry\s*#(\d+)/i);
+                  const issueDialectMatch = issueTitle.match(/Add (?:Regional )?Dialect Entry\s*#(\d+)/i);
                   const prDialectMatch = prTitle.match(/#(\d+)/);
                   const dialectId = issueDialectMatch ? parseInt(issueDialectMatch[1]) : (prDialectMatch ? parseInt(prDialectMatch[1]) : null);
 
                   if (dialectId !== null) {
                     const dialectIndex = regionalDialects.findIndex(function(d) { return d.id === dialectId; });
                     if (dialectIndex !== -1) {
+                      regionalDialects[dialectIndex].issued = false;
                       regionalDialects[dialectIndex].completed = true;
                       regionalDialects[dialectIndex].completedBy = prAuthor;
                       regionalDialects[dialectIndex].completedPR = prNumber;
@@ -461,13 +482,14 @@ jobs:
                   }
                 } else if (isFalseFriendContribution) {
                   const items = JSON.parse(fs.readFileSync(falseFriendsBacklogPath, 'utf8'));
-                  const issueMatch = issueTitle.match(/Add Japanese False Friend\s*#(\d+)/i);
+                  const issueMatch = issueTitle.match(/Add (?:Japanese )?False Friend(?:\s*Pair)?\s*#(\d+)/i);
                   const prMatch = prTitle.match(/#(\d+)/);
                   const id = issueMatch ? parseInt(issueMatch[1]) : (prMatch ? parseInt(prMatch[1]) : null);
 
                   if (id !== null) {
                     const idx = items.findIndex(function(i) { return i.id === id; });
                     if (idx !== -1) {
+                      items[idx].issued = false;
                       items[idx].completed = true;
                       items[idx].completedBy = prAuthor;
                       items[idx].completedPR = prNumber;
@@ -478,13 +500,14 @@ jobs:
                   }
                 } else if (isCulturalEtiquetteContribution) {
                   const items = JSON.parse(fs.readFileSync(culturalEtiquetteBacklogPath, 'utf8'));
-                  const issueMatch = issueTitle.match(/Add Japanese Cultural Etiquette Tip\s*#(\d+)/i);
+                  const issueMatch = issueTitle.match(/Add (?:Japanese Cultural )?Etiquette Tip\s*#(\d+)/i);
                   const prMatch = prTitle.match(/#(\d+)/);
                   const id = issueMatch ? parseInt(issueMatch[1]) : (prMatch ? parseInt(prMatch[1]) : null);
 
                   if (id !== null) {
                     const idx = items.findIndex(function(i) { return i.id === id; });
                     if (idx !== -1) {
+                      items[idx].issued = false;
                       items[idx].completed = true;
                       items[idx].completedBy = prAuthor;
                       items[idx].completedPR = prNumber;
@@ -495,13 +518,14 @@ jobs:
                   }
                 } else if (isExampleSentenceContribution) {
                   const items = JSON.parse(fs.readFileSync(exampleSentencesBacklogPath, 'utf8'));
-                  const issueMatch = issueTitle.match(/Add Japanese Example Sentence\s*#(\d+)/i);
+                  const issueMatch = issueTitle.match(/Add (?:Japanese )?Example Sentence\s*#(\d+)/i);
                   const prMatch = prTitle.match(/#(\d+)/);
                   const id = issueMatch ? parseInt(issueMatch[1]) : (prMatch ? parseInt(prMatch[1]) : null);
 
                   if (id !== null) {
                     const idx = items.findIndex(function(i) { return i.id === id; });
                     if (idx !== -1) {
+                      items[idx].issued = false;
                       items[idx].completed = true;
                       items[idx].completedBy = prAuthor;
                       items[idx].completedPR = prNumber;
@@ -512,13 +536,14 @@ jobs:
                   }
                 } else if (isCommonMistakeContribution) {
                   const items = JSON.parse(fs.readFileSync(commonMistakesBacklogPath, 'utf8'));
-                  const issueMatch = issueTitle.match(/Add Common Japanese Learner Mistake\s*#(\d+)/i);
+                  const issueMatch = issueTitle.match(/Add (?:Common Japanese )?Learner Mistake\s*#(\d+)/i);
                   const prMatch = prTitle.match(/#(\d+)/);
                   const id = issueMatch ? parseInt(issueMatch[1]) : (prMatch ? parseInt(prMatch[1]) : null);
 
                   if (id !== null) {
                     const idx = items.findIndex(function(i) { return i.id === id; });
                     if (idx !== -1) {
+                      items[idx].issued = false;
                       items[idx].completed = true;
                       items[idx].completedBy = prAuthor;
                       items[idx].completedPR = prNumber;
@@ -529,13 +554,14 @@ jobs:
                   }
                 } else if (isVideoGameQuoteContribution) {
                   const items = JSON.parse(fs.readFileSync(videoGameQuotesBacklogPath, 'utf8'));
-                  const issueMatch = issueTitle.match(/Add Famous Japanese Video Game Quote\s*#(\d+)/i);
+                  const issueMatch = issueTitle.match(/Add (?:Famous Japanese )?Video Game Quote\s*#(\d+)/i);
                   const prMatch = prTitle.match(/#(\d+)/);
                   const id = issueMatch ? parseInt(issueMatch[1]) : (prMatch ? parseInt(prMatch[1]) : null);
 
                   if (id !== null) {
                     const idx = items.findIndex(function(i) { return i.id === id; });
                     if (idx !== -1) {
+                      items[idx].issued = false;
                       items[idx].completed = true;
                       items[idx].completedBy = prAuthor;
                       items[idx].completedPR = prNumber;
@@ -555,14 +581,55 @@ jobs:
             core.setOutput('should_commit', needsCommit ? 'true' : 'false');
 
       - name: Commit backlog updates
+        id: commit-backlog
         if: steps.close-issue.outputs.should_commit == 'true'
-        run: |
-          git add community/backlog/
-          if git diff --cached --quiet; then
-            echo "No backlog changes to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(automation): mark contribution as completed"
-          git push
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          add-paths: |
+            community/backlog/
+          commit-message: 'chore(automation): mark contribution as completed'
+          branch: automation/community-data/pr-merge-${{ github.run_id }}
+          title: 'chore(automation): update community backlog'
+          body: Automated update to community backlog state.
+          base: main
+          delete-branch: true
+
+      - name: Merge backlog PR
+        if: steps.close-issue.outputs.should_commit == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          script: |
+            const prNumber = Number(process.env.PR_NUMBER);
+            if (!prNumber) {
+              console.log('No PR was created; nothing to merge');
+              return;
+            }
+            async function sleep(ms) { return new Promise(function(resolve) { setTimeout(resolve, ms); }); }
+            const MAX_RETRIES = 10;
+            for (let i = 1; i <= MAX_RETRIES; i += 1) {
+              try {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  merge_method: 'squash'
+                });
+                console.log('Merged backlog PR #' + prNumber);
+                return;
+              } catch (e) {
+                console.log('Merge attempt ' + i + ' failed: ' + e.message);
+                if (e.status === 409) {
+                  try {
+                    await github.rest.pulls.updateBranch({ owner: context.repo.owner, repo: context.repo.repo, pull_number: prNumber });
+                  } catch (updateErr) {
+                    console.log('Could not update branch: ' + updateErr.message);
+                  }
+                }
+                if (i < MAX_RETRIES) { await sleep(2000); }
+              }
+            }
+            throw new Error('Failed to merge backlog PR #' + prNumber);
+        env:
+          PR_NUMBER: ${{ steps.commit-backlog.outputs.pull-request-number }}

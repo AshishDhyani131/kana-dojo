@@ -12,6 +12,7 @@ on:
 permissions:
   contents: write
   issues: read
+  pull-requests: write
 
 concurrency:
   group: community-backfill
@@ -26,12 +27,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
 
       - name: Re-enable backlog from closed issues
         id: backfill
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
           script: |
             const fs = require('fs');
             const templates = require('./.github/templates/messages.cjs');
@@ -79,8 +82,8 @@ jobs:
             let reenabled = 0;
 
             function reenableFromTitle(title) {
-              if (title.includes('Add New Color Theme:')) {
-                const themeMatch = title.match(/Add New Color Theme:\s*(.+?)\s*\(good[- ]first issue\)/i);
+              if (title.includes('Add New Color Theme:') || title.includes('Add Theme:')) {
+                const themeMatch = title.match(/Add (?:New Color )?Theme:\s*(.+?)\s*(?:—|\(good)/i);
                 if (themeMatch) {
                   const themeName = themeMatch[1].trim();
                   const themeIndex = themes.findIndex(function(t) { return t.name === themeName; });
@@ -124,7 +127,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Classic Japanese Haiku #')) {
+              if (title.includes('Add Classic Japanese Haiku #') || title.includes('Add Japanese Haiku #')) {
                 const haikuIdMatch = title.match(/#(\d+)/);
                 if (haikuIdMatch) {
                   const haikuId = parseInt(haikuIdMatch[1]);
@@ -139,7 +142,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add New Trivia Question #')) {
+              if (title.includes('Add New Trivia Question #') || title.includes('Add Trivia Question #')) {
                 const triviaIdMatch = title.match(/#(\d+)/);
                 if (triviaIdMatch) {
                   const triviaId = parseInt(triviaIdMatch[1]);
@@ -154,7 +157,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add New Grammar Point #')) {
+              if (title.includes('Add New Grammar Point #') || title.includes('Add Grammar Point #')) {
                 const grammarIdMatch = title.match(/#(\d+)/);
                 if (grammarIdMatch) {
                   const grammarId = parseInt(grammarIdMatch[1]);
@@ -169,7 +172,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add New Japanese Idiom #')) {
+              if (title.includes('Add New Japanese Idiom #') || title.includes('Add Japanese Idiom #')) {
                 const idiomIdMatch = title.match(/#(\d+)/);
                 if (idiomIdMatch) {
                   const idiomId = parseInt(idiomIdMatch[1]);
@@ -184,7 +187,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Regional Dialect Entry #')) {
+              if (title.includes('Add Regional Dialect Entry #') || title.includes('Add Dialect Entry #')) {
                 const dialectIdMatch = title.match(/#(\d+)/);
                 if (dialectIdMatch) {
                   const dialectId = parseInt(dialectIdMatch[1]);
@@ -199,7 +202,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Japanese False Friend #')) {
+              if (title.includes('Add Japanese False Friend #') || title.includes('Add False Friend Pair #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -214,7 +217,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Japanese Cultural Etiquette Tip #')) {
+              if (title.includes('Add Japanese Cultural Etiquette Tip #') || title.includes('Add Etiquette Tip #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -229,7 +232,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Japanese Example Sentence #')) {
+              if (title.includes('Add Japanese Example Sentence #') || title.includes('Add Example Sentence #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -244,7 +247,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Common Japanese Learner Mistake #')) {
+              if (title.includes('Add Common Japanese Learner Mistake #') || title.includes('Add Learner Mistake #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -259,7 +262,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Famous Japanese Video Game Quote #')) {
+              if (title.includes('Add Famous Japanese Video Game Quote #') || title.includes('Add Video Game Quote #')) {
                 const idMatch = title.match(/#(\d+)/);
                 if (idMatch) {
                   const id = parseInt(idMatch[1]);
@@ -274,7 +277,7 @@ jobs:
                 return;
               }
 
-              if (title.includes('Add Famous Anime Quote #')) {
+              if (title.includes('Add Famous Anime Quote #') || title.includes('Add Anime Quote #')) {
                 const quoteIdMatch = title.match(/#(\d+)/);
                 if (quoteIdMatch) {
                   const quoteId = parseInt(quoteIdMatch[1]);
@@ -286,6 +289,7 @@ jobs:
                     console.log(`Re-enabled anime quote #${quoteId}`);
                   }
                 }
+                return;
               }
             }
 
@@ -350,14 +354,55 @@ jobs:
             }
 
       - name: Commit backlog updates
+        id: commit-backlog
         if: steps.backfill.outputs.needs_commit == 'true'
-        run: |
-          git add community/backlog/
-          if git diff --cached --quiet; then
-            echo "No backlog changes to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(automation): backfill community backlog"
-          git push
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          add-paths: |
+            community/backlog/
+          commit-message: 'chore(automation): backfill community backlog'
+          branch: automation/community-data/backfill-${{ github.run_id }}
+          title: 'chore(automation): update community backlog'
+          body: Automated update to community backlog state.
+          base: main
+          delete-branch: true
+
+      - name: Merge backlog PR
+        if: steps.backfill.outputs.needs_commit == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.AUTOMATION_PR_TOKEN }}
+          script: |
+            const prNumber = Number(process.env.PR_NUMBER);
+            if (!prNumber) {
+              console.log('No PR was created; nothing to merge');
+              return;
+            }
+            async function sleep(ms) { return new Promise(function(resolve) { setTimeout(resolve, ms); }); }
+            const MAX_RETRIES = 10;
+            for (let i = 1; i <= MAX_RETRIES; i += 1) {
+              try {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  merge_method: 'squash'
+                });
+                console.log('Merged backlog PR #' + prNumber);
+                return;
+              } catch (e) {
+                console.log('Merge attempt ' + i + ' failed: ' + e.message);
+                if (e.status === 409) {
+                  try {
+                    await github.rest.pulls.updateBranch({ owner: context.repo.owner, repo: context.repo.repo, pull_number: prNumber });
+                  } catch (updateErr) {
+                    console.log('Could not update branch: ' + updateErr.message);
+                  }
+                }
+                if (i < MAX_RETRIES) { await sleep(2000); }
+              }
+            }
+            throw new Error('Failed to merge backlog PR #' + prNumber);
+        env:
+          PR_NUMBER: ${{ steps.commit-backlog.outputs.pull-request-number }}
