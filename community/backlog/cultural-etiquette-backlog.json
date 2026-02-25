@@ -32,7 +32,7 @@
     "do": "Receive cards with both hands and read them.",
     "dont": "Do not put cards in your pocket immediately.",
     "note": "Treat cards as extensions of identity. Entry 4.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
